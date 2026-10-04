@@ -68,17 +68,17 @@ const description =
           {parallels.map((item) => (
             <li>
               <div class="when">{item.label}</div>
-              <p>
+              <div>
                 {"logo" in item && item.logo && (
-                  <span class="chip"><img src={item.logo} alt="" /></span>
+                  <img class="mark" src={item.logo} alt="" />
                 )}
-                {" "}
-                {"href" in item && item.href ? (
-                  <a class="ink-link" href={item.href}>{item.detail}</a>
-                ) : (
-                  item.detail
-                )}
-              </p>
+                <p>
+                  {item.detail}
+                  {"href" in item && item.href && (
+                    <> <a class="ink-link" href={item.href}>Editoria de Tecnologia</a></>
+                  )}
+                </p>
+              </div>
             </li>
           ))}
         </ul>
@@ -91,15 +91,15 @@ const description =
       <h2 id="coluna-titulo">Na coluna da Zumm</h2>
       <p class="lead">
         Textos da editoria de Tecnologia do Portal Zumm, assinados por Olsen Rodrigo.
-        A revista impressa segue no papel. Cada frase abaixo é o começo do texto, no portal.
+        A revista impressa segue no papel. A frase é o começo de cada texto.
       </p>
       <ul class="column-list">
         {zummArticles.map((item) => (
           <li>
             <div class="when">{item.date}</div>
             <div>
-              <h3><a class="ink-link" href={item.href}>{item.title}</a></h3>
-              <p>“{item.excerpt}”</p>
+              <h3><a href={item.href}>{item.title}</a></h3>
+              <p>{item.excerpt}</p>
             </div>
           </li>
         ))}

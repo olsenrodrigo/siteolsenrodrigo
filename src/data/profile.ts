@@ -88,7 +88,7 @@ export const parallels = [
   {
     label: "Colunista",
     detail:
-      "Zumm, revista impressa e portal do Grupo Zumm, o Mundo Zumm. A mídia mais importante de Ribeirão Preto, no papel e no digital. No portal, a editoria de Tecnologia.",
+      "Zumm, revista impressa e portal do Grupo Zumm, o Mundo Zumm. A mídia mais importante de Ribeirão Preto, no papel e no digital.",
     href: "https://portalzumm.com.br/category/tecnologia/",
   },
   {
@@ -233,7 +233,7 @@ export const faqHome: Faq[] = [
   {
     question: "Quem é Olsen Rodrigo?",
     answer:
-      "Olsen Rodrigo Mott Silva, da marca EAIOLSEN, é CEO e fundador da Sintetiza AI e gerente de projetos certificado PMP desde 2016. Tem mais de 18 anos em tecnologia aplicada a negócios, com a carreira concentrada em saúde. Formou-se em Informática Biomédica na USP de Ribeirão Preto, fez MBA na FGV e especialização executiva de CTO no Insper. É pai, fala de fé, família e alta performance, treina jiu-jitsu e assina textos de tecnologia na Zumm, revista e portal de Ribeirão Preto.",
+      "Olsen Rodrigo Mott Silva, da marca EAIOLSEN, é CEO e fundador da Sintetiza AI e gerente de projetos certificado PMP desde 2016. Tem mais de 18 anos em tecnologia aplicada a negócios, com a carreira concentrada em saúde. Formou-se em Informática Biomédica na USP de Ribeirão Preto, fez MBA na FGV e especialização executiva de CTO no Insper. É pai, marido, empreendedor e executivo de carreira. Fala de fé e família, treina jiu-jitsu e tênis, e assina textos de tecnologia na Zumm, revista e portal de Ribeirão Preto.",
   },
   {
     question: "Qual foi o resultado mais relevante da carreira dele?",
