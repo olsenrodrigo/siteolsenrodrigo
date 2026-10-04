@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://olsenrodrigo.com/sitemap-index.xml

@@ -1,0 +1,65 @@
+---
+import Base from "../layouts/Base.astro";
+import Photo from "../components/Photo.astro";
+import Faq from "../components/Faq.astro";
+import { faqMentoria, whatsappLink } from "../data/profile";
+
+const title = "Mentoria com Olsen Rodrigo | EAIOLSEN";
+const description =
+  "Mentoria para fundadores, CEOs e lideranças que precisam decidir como usar inteligência artificial. Conversas em profundidade, sem turma e sem curso.";
+---
+
+<Base title={title} description={description} page="mentoria" path="/mentoria/">
+  <header class="page-head">
+    <div class="wrap">
+      <h1>Mentoria</h1>
+      <p>
+        Para a pessoa que lidera. O assunto é a decisão: o que automatizar,
+        o que permanece humano, e como cobrar isso de quem constrói.
+      </p>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap split">
+      <figure class="frame">
+        <Photo
+          name="olsen-estudio"
+          alt="Olsen Rodrigo no estúdio, de camisa preta, falando ao microfone."
+          width={1400}
+          height={2491}
+        />
+        <figcaption>A mentoria é conversa. O microfone é o ofício de explicar sem espetáculo.</figcaption>
+      </figure>
+      <div>
+        <h2>Quem senta do outro lado</h2>
+        <p class="lead">
+          Fundadores, CEOs e lideranças de tecnologia ou de negócio que já respondem
+          por resultado. Gente que não precisa de mais um mapa de ferramentas.
+          Precisa de um critério que sobreviva à segunda-feira.
+        </p>
+        <p class="muted">
+          Olsen traz dezoito anos em operação de verdade, doze deles construindo
+          o sistema de clínicas que chegou a mais de 25 milhões de vidas, e o
+          ciclo de C-level na AmorSaúde. A mentoria usa essa régua no problema
+          de quem está na sala.
+        </p>
+        <h2>O que acontece</h2>
+        <p>
+          Uma primeira conversa para ver se a decisão cabe nesse formato.
+          Se couber, encontros combinados, com preparo dos dois lados.
+          Sem turma, sem gravação obrigatória, sem trilha de aulas.
+        </p>
+        <p>
+          Quem procura curso tem outro endereço: a disciplina de IA aplicada a
+          negócios que ele dá na Escola Prudem, em Ipatinga.
+        </p>
+        <p>
+          <a class="ink-link" href={whatsappLink("mentoria")}>Pedir uma conversa de mentoria</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Faq items={faqMentoria} title="Antes de escrever" />
+</Base>

@@ -1,0 +1,76 @@
+---
+import Base from "../layouts/Base.astro";
+import Photo from "../components/Photo.astro";
+import { parallels, timeline } from "../data/profile";
+
+const title = "Trajetória de Olsen Rodrigo | EAIOLSEN";
+const description =
+  "De 2004 à Sintetiza AI: Edumed, Hemocentro da USP, doze anos na Matrix, C-level na AmorSaúde, Play Technology e a fundação da Sintetiza em 2025.";
+---
+
+<Base title={title} description={description} page="trajetoria" path="/trajetoria/">
+  <header class="page-head">
+    <div class="wrap">
+      <h1>Trajetória</h1>
+      <p>
+        A história não começa numa rede social. Começa num curso de informática
+        em que ele não queria estar, e segue por sistemas em que parar não era opção.
+      </p>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="lead">
+        Olsen Rodrigo passou mais de 18 anos onde tecnologia e operação se encontram.
+        O trecho longo é a Matrix. O trecho de liderança formal é a AmorSaúde.
+        O trecho atual é a Sintetiza AI, empresa que ele fundou em dezembro de 2025.
+      </p>
+      <ol class="timeline">
+        {timeline.map((item) => (
+          <li>
+            <div class="when">{item.period}</div>
+            <div>
+              <h2 class="row-title">
+                <span class="chip"><img src={item.logo} alt="" /></span>
+                {item.href ? <a href={item.href}>{item.org}</a> : item.org}
+              </h2>
+              <p class="role">{item.role}</p>
+              <p class="muted">{item.text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top: 0">
+    <div class="wrap split">
+      <figure class="frame">
+        <Photo
+          name="olsen-evento"
+          alt="Olsen Rodrigo em pé, de braços cruzados, com crachá no peito em um evento."
+          width={1200}
+          height={1800}
+        />
+        <figcaption>Presença pública. O crachá leva o nome pelo qual o mercado o chama.</figcaption>
+      </figure>
+      <div>
+        <h2>Em paralelo à cadeira</h2>
+        <ul class="plain-list">
+          {parallels.map((item) => (
+            <li>
+              <div class="when">{item.label}</div>
+              <p>
+                {item.logo && (
+                  <span class="chip"><img src={item.logo} alt="" /></span>
+                )}
+                {" "}{item.detail}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+</Base>

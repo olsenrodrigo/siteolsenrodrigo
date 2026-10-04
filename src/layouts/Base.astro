@@ -1,0 +1,78 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../data/profile";
+import { jsonLd } from "../lib/seo";
+
+interface Props {
+  title: string;
+  description: string;
+  page: string;
+  path: string;
+  ogType?: "website" | "profile";
+  robots?: string;
+}
+
+const {
+  title,
+  description,
+  page,
+  path,
+  ogType = "website",
+  robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+} = Astro.props;
+const canonical = new URL(path, site.url).href;
+const json = jsonLd(page);
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={site.fullName} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="pt-BR" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#141311" />
+    <meta name="geo.region" content="BR-SP" />
+    <meta name="geo.placename" content="Ribeirão Preto" />
+    <meta property="og:site_name" content={`${site.name} — ${site.brand}`} />
+    <meta property="og:type" content={ogType} />
+    {ogType === "profile" && (
+      <>
+        <meta property="profile:first_name" content="Olsen" />
+        <meta property="profile:last_name" content="Rodrigo" />
+      </>
+    )}
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={site.ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Olsen Rodrigo, EAIOLSEN. Menos hype. Mais inteligência." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={site.ogImage} />
+    <script type="application/ld+json" set:html={json} />
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+    <Header path={Astro.url.pathname} />
+    <main id="conteudo">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,147 @@
+---
+import Base from "../layouts/Base.astro";
+import Photo from "../components/Photo.astro";
+import Faq from "../components/Faq.astro";
+import { faqHome, mit, site, whatsappLink } from "../data/profile";
+
+const title = "Olsen Rodrigo | Mentoria e consultoria em IA";
+const description =
+  "Olsen Rodrigo, CEO da Sintetiza AI. Mais de 18 anos em tecnologia e saúde. Mentoria e consultoria para decidir como usar inteligência artificial com responsabilidade.";
+---
+
+<Base title={title} description={description} page="home" path="/" ogType="profile">
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1>Olsen<br />Rodrigo</h1>
+        <p class="slogan">{site.slogan}</p>
+        <hr class="sig" />
+        <p class="dek">
+          CEO da Sintetiza AI. Mais de 18 anos ligando tecnologia a negócio em lugares
+          onde erro custa caro, quase todos na saúde. Este site é a pessoa: a trajetória,
+          a sala de aula e as conversas de mentoria e consultoria.
+        </p>
+        <div class="hero-actions">
+          <a class="link" href="/mentoria/">Mentoria para quem lidera</a>
+          <a class="link" href="/consultoria/">Consultoria para a empresa</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <Photo
+          name="olsen-retrato"
+          alt="Olsen Rodrigo sentado, de blazer azul e camiseta preta, sorrindo para a câmera."
+          width={1400}
+          height={2100}
+          priority
+        />
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" aria-label="Marcas da carreira">
+    <div class="wrap">
+      <ul class="proofs">
+        <li>
+          <strong>18 anos</strong>
+          <span>de tecnologia aplicada a negócio, com o peso da carreira na saúde.</span>
+        </li>
+        <li>
+          <strong>25 milhões</strong>
+          <span>de vidas no sistema de clínicas que ele arquitetou na Matrix Saúde.</span>
+        </li>
+        <li>
+          <strong>C-level</strong>
+          <span>CPO e CTO da AmorSaúde. Consultor de Einstein, Rede D'Or, Hapvida e Fleury.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top: 0" aria-labelledby="pessoa">
+    <div class="wrap split">
+      <figure class="frame">
+        <Photo
+          name="olsen-claro"
+          alt="Olsen Rodrigo de camisa clara, sorrindo, com as mãos juntas sobre a mesa."
+          width={1400}
+          height={2491}
+          priority
+        />
+        <figcaption>Ribeirão Preto. A casa e a empresa cabem na mesma régua.</figcaption>
+      </figure>
+      <div>
+        <h2 id="pessoa">Pai, fé e o corpo na conta</h2>
+        <p class="lead">
+          A carreira pública cabe numa linha do tempo. O que a sustenta não cabe.
+          Olsen é pai. Deus entra nas decisões que não aparecem no currículo.
+          Família é o outro lugar em que erro não é detalhe.
+        </p>
+        <p class="muted">
+          Jiu-jitsu e alta performance fazem parte dessa mesma disciplina: o que ele
+          sustenta quando ninguém está medindo é o que autoriza o que ele fala sobre
+          decisão. Só duas coisas crescem quando se dividem: amor e conhecimento.
+        </p>
+        <p><a class="ink-link" href="/trajetoria/">Ler a trajetória</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="wrap">
+      <blockquote>{site.signature}</blockquote>
+      <p>{site.brand}. A frase vale para o cliente, para o time e para ele.</p>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="caminhos">
+    <div class="wrap">
+      <div class="paths">
+        <article>
+          <h2>Mentoria</h2>
+          <p>
+            Para a pessoa que já lidera e precisa de critério. Conversas, sem turma
+            e sem plataforma. O resultado é uma decisão melhor na empresa dela.
+          </p>
+          <p><a class="ink-link" href="/mentoria/">Ver como funciona a mentoria</a></p>
+        </article>
+        <article>
+          <h2>Consultoria</h2>
+          <p>
+            Para a empresa que precisa decidir antes de construir. O julgamento é
+            com Olsen. A execução, quando cabe, segue na Sintetiza AI.
+          </p>
+          <p><a class="ink-link" href="/consultoria/">Ver a consultoria</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top: 0" aria-labelledby="mit">
+    <div class="wrap">
+      <div class="feature">
+        <span class="chip"><img src="/marcas/mit.svg" alt="MIT" /></span>
+        <div>
+          <h2 id="mit">{mit.name}</h2>
+          <p>
+            Selecionado para a imersão {mit.full}, em Boston, {mit.when}. Até 30 CEOs
+            da América Latina, professores do MIT Sloan, e duas perguntas: como a
+            organização evolui com a inteligência artificial, e o que continua humano.
+            Aos 40, ainda aluno.
+          </p>
+          <p><a class="link" href="/formacao/">Formação, certificações e o programa</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Faq items={faqHome} />
+
+  <section class="band" style="padding-top: 0">
+    <div class="wrap">
+      <p class="lead">A primeira mensagem pode ser curta: a decisão que está em aberto.</p>
+      <p>
+        <a class="ink-link" href={whatsappLink("uma decisão")}>Chamar no WhatsApp</a>
+      </p>
+    </div>
+  </section>
+</Base>

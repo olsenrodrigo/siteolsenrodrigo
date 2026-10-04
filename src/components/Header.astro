@@ -1,0 +1,35 @@
+---
+import { nav } from "../data/profile";
+
+interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+
+function current(href: string) {
+  const bare = href.replace(/\/$/, "") || "/";
+  const here = path.replace(/\/$/, "") || "/";
+  return here === bare;
+}
+---
+
+<header class="mast">
+  <div class="mast-inner">
+    <a class="brand" href="/" aria-label="EAIOLSEN, página inicial">
+      <img src="/marca/eaiolsen.png" width="136" height="30" alt="EAIOLSEN" />
+    </a>
+    <nav aria-label="Seções">
+      <ul class="nav-links">
+        {nav.map((item) => (
+          <li>
+            <a href={item.href} aria-current={current(item.href) ? "page" : undefined}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+  <div class="rule" aria-hidden="true"></div>
+</header>

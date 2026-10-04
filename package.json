@@ -1,0 +1,21 @@
+{
+  "name": "siteolsenrodrigo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1 --port 4321",
+    "build": "astro build",
+    "start": "node server.mjs",
+    "preview": "astro preview --host 127.0.0.1 --port 4321"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource/fraunces": "^5.3.0",
+    "@fontsource/sora": "^5.3.0",
+    "astro": "^5.18.2"
+  }
+}

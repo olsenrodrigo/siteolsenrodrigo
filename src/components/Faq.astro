@@ -1,0 +1,24 @@
+---
+import type { Faq } from "../data/profile";
+
+interface Props {
+  items: Faq[];
+  title?: string;
+}
+
+const { items, title = "Perguntas que o site responde" } = Astro.props;
+---
+
+<section class="band" aria-labelledby="faq-titulo">
+  <div class="wrap">
+    <h2 id="faq-titulo">{title}</h2>
+    <div class="qa">
+      {items.map((item) => (
+        <article>
+          <h3>{item.question}</h3>
+          <p>{item.answer}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
