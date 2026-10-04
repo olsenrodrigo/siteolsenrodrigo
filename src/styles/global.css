@@ -134,8 +134,7 @@ a { color: inherit; }
 
 .hero-grid > *,
 .split > *,
-.paths > *,
-.feature > * { min-width: 0; }
+.paths > * { min-width: 0; }
 
 h1, h2, h3, .slogan, .row-title, .proofs strong, .qa h3, .quote-band blockquote {
   font-family: var(--display);
@@ -389,35 +388,6 @@ h1 {
   object-fit: contain;
 }
 
-.feature {
-  margin-top: 2.4rem;
-  background: var(--paper-2);
-  color: var(--text);
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 1.3rem 1.6rem;
-  padding: 1.5rem 1.5rem 1.5rem 1.35rem;
-  border-left: 4px solid var(--petrol);
-}
-
-.feature h2 {
-  color: var(--ink);
-  margin: 0.2rem 0 0.45rem;
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
-  max-width: 18ch;
-}
-
-.feature p { margin: 0.4rem 0; color: var(--text); }
-
-.feature .chip { align-self: start; }
-
-.faculty {
-  margin: 0.8rem 0 0;
-  padding-left: 1.1rem;
-}
-
-.faculty li { margin: 0.25rem 0; }
-
 .qa { margin-top: 1.2rem; }
 
 .qa article {
@@ -578,8 +548,7 @@ h1 {
   .timeline li,
   .plain-list li,
   .column-list li,
-  .contact-list li,
-  .feature {
+  .contact-list li {
     grid-template-columns: minmax(0, 1fr);
   }
 

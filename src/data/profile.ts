@@ -203,28 +203,10 @@ export const certifications = [
 
 export const mit = {
   name: "MIT CEO Summit 2026",
-  full: "Human-Centered AI Leadership Immersion",
-  when: "5 a 7 de outubro de 2026",
-  where: "Boston e Cambridge, Massachusetts",
-  summary:
-    "Imersão por convite para um grupo de até 30 CEOs e fundadores da América Latina. Três dias com professores do MIT Sloan, visitas ao ecossistema de inovação de Boston e mesas fechadas entre pares.",
-  questions: [
-    "Como as organizações devem evoluir na era da inteligência artificial?",
-    "O que continua sendo unicamente humano?",
-  ],
-  faculty: [
-    "Roberto Rigobon, professor de economia aplicada e diretor do programa pelo MIT Sloan Latin American Office",
-    "Vivek Farias, professor de gestão de operações",
-    "Kate Kellogg, professora de estudos do trabalho e das organizações",
-    "Zeynep Ton, professora de gestão de operações",
-    "Isabella Loaiza, pesquisadora do MIT Sloan",
-  ],
-  visits: [
-    "Abertura no MIT Museum, em 5 de outubro",
-    "Sessões no MIT Sloan School of Management",
-    "Visitas a Microsoft New England, Google Cambridge e Greentown Labs",
-  ],
-  note: "É formação executiva por seleção. Não é diploma, certificado acadêmico nem vínculo de ex-aluno do MIT.",
+  year: "2026",
+  logo: "/marcas/logo_mit.png",
+  place:
+    "Selecionado para uma imersão em Boston, de 5 a 7 de outubro, com professores do MIT Sloan. Não é diploma do MIT.",
 } as const;
 
 export type Faq = { question: string; answer: string };
@@ -297,7 +279,7 @@ export const faqFormacao: Faq[] = [
   {
     question: "Olsen é formado pelo MIT?",
     answer:
-      "Não. A formação acadêmica é USP Ribeirão Preto, FGV e Insper. Em 2026 ele foi selecionado para o MIT CEO Summit, uma imersão por convite em Boston, de 5 a 7 de outubro, com professores do MIT Sloan e até 30 CEOs da América Latina. É sala de aula executiva. Não é diploma nem certificado de conclusão do MIT.",
+      "Não. A formação acadêmica é USP Ribeirão Preto, FGV e Insper. Em outubro de 2026 ele foi selecionado para o MIT CEO Summit, uma imersão em Boston com professores do MIT Sloan. Não é diploma do MIT.",
   },
   {
     question: "Quais certificações profissionais ele tem?",

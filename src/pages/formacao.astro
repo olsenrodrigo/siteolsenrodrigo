@@ -14,8 +14,7 @@ const description =
       <h1>Formação</h1>
       <p>
         A certificação que organiza o resto é o PMP, desde 2016. As escolas explicam
-        de onde ele veio. O projeto explica como ele trabalha. Em outubro de 2026,
-        uma sala em Boston para a qual ele foi selecionado.
+        de onde ele veio. O projeto explica como ele trabalha.
       </p>
     </div>
   </header>
@@ -36,6 +35,16 @@ const description =
             </div>
           </li>
         ))}
+        <li>
+          <div class="when">{mit.year}</div>
+          <div>
+            <h3 class="row-title">
+              <span class="chip"><img src={mit.logo} alt="" /></span>
+              {mit.name}
+            </h3>
+            <p class="muted">{mit.place}</p>
+          </div>
+        </li>
       </ol>
     </div>
   </section>
@@ -63,29 +72,6 @@ const description =
           </li>
         ))}
       </ul>
-
-      <article class="feature">
-        <span class="chip"><img src="/marcas/mit.svg" alt="MIT" /></span>
-        <div>
-          <h2>{mit.name}</h2>
-          <p class="role">{mit.full}</p>
-          <p>{mit.when}. {mit.where}.</p>
-          <p>{mit.summary}</p>
-          <p>As duas perguntas do programa:</p>
-          <ul class="faculty">
-            {mit.questions.map((question) => <li>{question}</li>)}
-          </ul>
-          <p>Corpo docente anunciado para a edição:</p>
-          <ul class="faculty">
-            {mit.faculty.map((person) => <li>{person}</li>)}
-          </ul>
-          <p>Agenda confirmada no material de julho de 2026:</p>
-          <ul class="faculty">
-            {mit.visits.map((visit) => <li>{visit}</li>)}
-          </ul>
-          <p>{mit.note}</p>
-        </div>
-      </article>
     </div>
   </section>
 

@@ -63,6 +63,12 @@ const person = {
       credentialCategory: "degree",
       recognizedBy: { "@type": "Organization", name: item.place },
     })),
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: mit.name,
+      credentialCategory: "executive education",
+      description: mit.place,
+    },
   ],
   knowsAbout: [
     "Inteligência artificial aplicada a negócios",
@@ -75,29 +81,6 @@ const person = {
     "Governança de inteligência artificial",
   ],
   sameAs: [site.instagram, site.linkedin, site.sintetiza, `${site.url}/`],
-};
-
-const summit = {
-  "@type": "Event",
-  "@id": `${site.url}/#mit-ceo-summit-2026`,
-  name: `${mit.name} — ${mit.full}`,
-  startDate: "2026-10-05",
-  endDate: "2026-10-07",
-  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-  eventStatus: "https://schema.org/EventScheduled",
-  location: {
-    "@type": "Place",
-    name: "MIT Sloan School of Management",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Cambridge",
-      addressRegion: "MA",
-      addressCountry: "US",
-    },
-  },
-  description: mit.summary,
-  organizer: { "@type": "Organization", name: "Chile Massachusetts Alliance" },
-  attendee: { "@id": personId },
 };
 
 function breadcrumb(items: { name: string; path: string }[]) {
@@ -146,7 +129,7 @@ export function graphFor(page: string) {
     publisher: { "@id": personId },
   };
 
-  const nodes: object[] = [person, website, summit];
+  const nodes: object[] = [person, website];
 
   if (page === "home") {
     nodes.push({
