@@ -5,6 +5,7 @@ import {
   faqFormacao,
   faqHome,
   faqMentoria,
+  zummArticles,
   mit,
   site,
   timeline,
@@ -173,6 +174,23 @@ export function graphFor(page: string) {
         position: index + 1,
         name: `${item.period} ${item.org}`,
         description: `${item.role}. ${item.text}`,
+      })),
+    });
+    nodes.push({
+      "@type": "ItemList",
+      name: "Textos de Olsen Rodrigo na editoria de Tecnologia do Portal Zumm",
+      itemListElement: zummArticles.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Article",
+          headline: item.title,
+          datePublished: item.published,
+          inLanguage: "pt-BR",
+          url: item.href,
+          author: { "@id": personId },
+          description: item.excerpt,
+        },
       })),
     });
   }

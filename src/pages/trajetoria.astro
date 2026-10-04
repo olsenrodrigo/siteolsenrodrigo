@@ -1,11 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
 import Photo from "../components/Photo.astro";
-import { parallels, timeline } from "../data/profile";
+import { parallels, timeline, zummArticles, zummCategory } from "../data/profile";
 
 const title = "Trajetória de Olsen Rodrigo | EAIOLSEN";
 const description =
-  "De 2004 à Sintetiza AI: Edumed, Hemocentro da USP, doze anos na Matrix, C-level na AmorSaúde Brasil, Play Technology e a fundação da Sintetiza em 2025.";
+  "De 2004 à Sintetiza AI, e a coluna de tecnologia na Zumm: trechos dos textos assinados por Olsen Rodrigo no Portal Zumm.";
 ---
 
 <Base title={title} description={description} page="trajetoria" path="/trajetoria/">
@@ -83,6 +83,30 @@ const description =
           ))}
         </ul>
       </div>
+    </div>
+  </section>
+
+  <section class="band band-alt" id="coluna" aria-labelledby="coluna-titulo">
+    <div class="wrap">
+      <h2 id="coluna-titulo">Na coluna da Zumm</h2>
+      <p class="lead">
+        Textos da editoria de Tecnologia do Portal Zumm, assinados por Olsen Rodrigo.
+        A revista impressa segue no papel. Cada frase abaixo é o começo do texto, no portal.
+      </p>
+      <ul class="column-list">
+        {zummArticles.map((item) => (
+          <li>
+            <div class="when">{item.date}</div>
+            <div>
+              <h3><a class="ink-link" href={item.href}>{item.title}</a></h3>
+              <p>“{item.excerpt}”</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p class="note">
+        <a class="ink-link" href={zummCategory}>Editoria de Tecnologia no Portal Zumm</a>
+      </p>
     </div>
   </section>
 </Base>

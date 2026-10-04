@@ -475,6 +475,34 @@ h1 {
 
 .method li p { margin: 0; }
 
+.column-list {
+  list-style: none;
+  margin: 1.6rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.column-list li {
+  display: grid;
+  grid-template-columns: 8.2rem minmax(0, 1fr);
+  gap: 0.45rem 1.5rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.column-list h3 {
+  margin: 0;
+  font-size: 1.28rem;
+  font-weight: 600;
+  line-height: 1.25;
+  max-width: 38ch;
+}
+
+.column-list p {
+  margin: 0.4rem 0 0;
+  max-width: 62ch;
+}
+
 .hero-photo img {
   box-shadow: 0 18px 40px rgba(6, 50, 70, 0.12);
 }
@@ -521,6 +549,7 @@ h1 {
   .proofs,
   .timeline li,
   .plain-list li,
+  .column-list li,
   .contact-list li,
   .feature {
     grid-template-columns: minmax(0, 1fr);

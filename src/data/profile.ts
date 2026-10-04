@@ -88,8 +88,8 @@ export const parallels = [
   {
     label: "Colunista",
     detail:
-      "Zumm, revista impressa e portal do Grupo Zumm, o Mundo Zumm. A mídia mais importante de Ribeirão Preto, no papel e no digital.",
-    href: "https://portalzumm.com.br/",
+      "Zumm, revista impressa e portal do Grupo Zumm, o Mundo Zumm. A mídia mais importante de Ribeirão Preto, no papel e no digital. No portal, a editoria de Tecnologia.",
+    href: "https://portalzumm.com.br/category/tecnologia/",
   },
   {
     label: "Destaque",
@@ -109,6 +109,66 @@ export const parallels = [
   {
     label: "Palestrante",
     detail: "Inteligência artificial, método de projetos, carreira em tecnologia e alta performance.",
+  },
+] as const;
+
+export const zummCategory = "https://portalzumm.com.br/category/tecnologia/";
+
+export const zummArticles = [
+  {
+    date: "24 set 2026",
+    published: "2026-09-24",
+    title: "As big techs de IA combinaram de frear, mas a questão que importa é outra",
+    excerpt:
+      "Passei os últimos meses ouvindo empresários perguntarem qual é o melhor modelo. É a pergunta errada.",
+    href: "https://portalzumm.com.br/as-big-techs-de-ia-combinaram-de-frear-mas-a-questao-que-importa-e-outra/",
+  },
+  {
+    date: "10 set 2026",
+    published: "2026-09-10",
+    title: "O preço de um sonho",
+    excerpt:
+      "Peço licença aos leitores para, nesta edição, não falar de inteligência artificial.",
+    href: "https://portalzumm.com.br/o-preco-de-um-sonho/",
+  },
+  {
+    date: "26 ago 2026",
+    published: "2026-08-26",
+    title: "Chat ou agente: a diferença de perguntar para a IA e colocar a IA para trabalhar",
+    excerpt: "A maior parte do planeta nunca digitou um prompt na vida.",
+    href: "https://portalzumm.com.br/chat-ou-agente-a-diferenca-de-perguntar-para-a-ia-e-colocar-a-ia-para-trabalhar/",
+  },
+  {
+    date: "10 ago 2026",
+    published: "2026-08-10",
+    title: "A Meta matou a segmentação de público? O que mudou para quem vende com anúncio",
+    excerpt:
+      "Conteúdo relevante, base de contatos e histórico de relacionamento são patrimônio da empresa, com custo marginal que cai à medida que você constrói.",
+    href: "https://portalzumm.com.br/a-meta-matou-a-segmentacao-de-publico-o-que-mudou-para-quem-vende-com-anuncio/",
+  },
+  {
+    date: "28 jul 2026",
+    published: "2026-07-28",
+    title: "Vibe coding: a moda de criar sistemas conversando com a IA (e o que ela não te conta)",
+    excerpt:
+      "O sistema criado só na conversa com a IA é a maquete: bonito, funcional na tela, convincente. Mas a construção não aconteceu.",
+    href: "https://portalzumm.com.br/vibe-coding-a-moda-de-criar-sistemas-conversando-com-a-ia-e-o-que-ela-nao-te-conta/",
+  },
+  {
+    date: "15 jul 2026",
+    published: "2026-07-15",
+    title: "SEO e GEO: o que são e por que estão mudando o faturamento do seu negócio",
+    excerpt: "Em 2026, o Google perdeu o monopólio da pergunta.",
+    href: "https://portalzumm.com.br/seo-e-geo-o-que-sao-e-por-que-estao-mudando-o-faturamento-do-seu-negocio/",
+  },
+  {
+    date: "1 jul 2026",
+    published: "2026-07-01",
+    title:
+      "Da pandemia ao hype da IA: o que mudou no mercado de tecnologia (e por que isso importa para a sua empresa)",
+    excerpt:
+      "Cinco anos atrás, o mundo parou. E foi exatamente quando o mercado de tecnologia começou a girar mais rápido que nunca.",
+    href: "https://portalzumm.com.br/o-que-mudou-nomercado-de-tecnologia-e-por-que-isso-importa-para-a-sua-empresa/",
   },
 ] as const;
 
@@ -173,7 +233,7 @@ export const faqHome: Faq[] = [
   {
     question: "Quem é Olsen Rodrigo?",
     answer:
-      "Olsen Rodrigo Mott Silva, da marca EAIOLSEN, é CEO e fundador da Sintetiza AI e gerente de projetos certificado PMP desde 2016. Tem mais de 18 anos em tecnologia aplicada a negócios, com a carreira concentrada em saúde. Formou-se em Informática Biomédica na USP de Ribeirão Preto, fez MBA na FGV e especialização executiva de CTO no Insper. É pai, fala de fé, família e alta performance, treina jiu-jitsu e é colunista da Zumm, em Ribeirão Preto.",
+      "Olsen Rodrigo Mott Silva, da marca EAIOLSEN, é CEO e fundador da Sintetiza AI e gerente de projetos certificado PMP desde 2016. Tem mais de 18 anos em tecnologia aplicada a negócios, com a carreira concentrada em saúde. Formou-se em Informática Biomédica na USP de Ribeirão Preto, fez MBA na FGV e especialização executiva de CTO no Insper. É pai, fala de fé, família e alta performance, treina jiu-jitsu e assina textos de tecnologia na Zumm, revista e portal de Ribeirão Preto.",
   },
   {
     question: "Qual foi o resultado mais relevante da carreira dele?",

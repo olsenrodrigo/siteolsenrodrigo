@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import Photo from "../components/Photo.astro";
 import Faq from "../components/Faq.astro";
-import { faqHome, mit, site, whatsappLink } from "../data/profile";
+import { faqHome, mit, site, whatsappLink, zummArticles } from "../data/profile";
 
 const title = "Olsen Rodrigo | Mentoria e consultoria em IA";
 const description =
@@ -121,6 +121,28 @@ const description =
     <div class="wrap">
       <blockquote>{site.signature}</blockquote>
       <p>{site.brand}. A frase vale para o cliente, para o time e para ele.</p>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="coluna-home">
+    <div class="wrap">
+      <h2 id="coluna-home">Na coluna da Zumm</h2>
+      <p class="lead">
+        Na editoria de Tecnologia do Portal Zumm, a mídia mais importante de Ribeirão Preto.
+        Três dos textos mais recentes.
+      </p>
+      <ul class="column-list">
+        {zummArticles.slice(0, 3).map((item) => (
+          <li>
+            <div class="when">{item.date}</div>
+            <div>
+              <h3><a class="ink-link" href={item.href}>{item.title}</a></h3>
+              <p>“{item.excerpt}”</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p class="note"><a class="ink-link" href="/trajetoria/#coluna">Os sete textos da coluna</a></p>
     </div>
   </section>
 
