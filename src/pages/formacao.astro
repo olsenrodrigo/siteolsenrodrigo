@@ -13,8 +13,9 @@ const description =
     <div class="wrap">
       <h1>Formação</h1>
       <p>
-        Três escolas, cinco certificações e, em outubro de 2026, uma sala em Boston
-        para a qual ele foi selecionado. Conhecimento, para ele, não tem linha de chegada.
+        A certificação que organiza o resto é o PMP, desde 2016. As escolas explicam
+        de onde ele veio. O projeto explica como ele trabalha. Em outubro de 2026,
+        uma sala em Boston para a qual ele foi selecionado.
       </p>
     </div>
   </header>
@@ -42,6 +43,12 @@ const description =
   <section class="band" style="padding-top: 0" aria-labelledby="certs">
     <div class="wrap">
       <h2 id="certs">Certificações</h2>
+      <p class="lead">
+        PMP é Project Management Professional, a certificação do Project Management
+        Institute. Desde 2016, mentoria, consultoria e produto passam por ela:
+        escopo, risco, dono e a definição de pronto. O know-how é de saúde.
+        O método serve em qualquer área.
+      </p>
       <ul class="timeline">
         {certifications.map((item) => (
           <li>
@@ -61,7 +68,7 @@ const description =
         <span class="chip"><img src="/marcas/mit.svg" alt="MIT" /></span>
         <div>
           <h2>{mit.name}</h2>
-          <p class="role" style="color:#8fd8d4">{mit.full}</p>
+          <p class="role">{mit.full}</p>
           <p>{mit.when}. {mit.where}.</p>
           <p>{mit.summary}</p>
           <p>As duas perguntas do programa:</p>

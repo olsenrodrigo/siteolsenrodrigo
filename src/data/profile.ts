@@ -37,7 +37,7 @@ export const timeline = [
     org: "Instituto Edumed",
     role: "Estágio",
     text: "Primeiro trabalho em tecnologia aplicada à educação médica. O pai tinha colocado o filho num curso de informática quando ele ainda preferia videogame. A porta abriu por ali.",
-    logo: "/marcas/logo_edumed.gif",
+    logo: "/marcas/logo_edumed.png",
   },
   {
     period: "2005–2008",
@@ -51,20 +51,20 @@ export const timeline = [
     org: "Instituto Edumed",
     role: "Tecnologia",
     text: "Retorno depois da formatura, já com o diploma da USP.",
-    logo: "/marcas/logo_edumed.gif",
+    logo: "/marcas/logo_edumed.png",
   },
   {
     period: "2009–2021",
     org: "Matrix Saúde",
     role: "Gestão de produto e tecnologia",
-    text: "Doze anos. Arquitetou o maior sistema de gestão para clínicas do Brasil. A operação passou a alcançar mais de 25 milhões de vidas.",
+    text: "Doze anos. Os sistemas da Matrix processam 70 milhões de exames por mês. Cerca de um terço da medicina laboratorial do Brasil passa por eles.",
     logo: "/marcas/logo_matrix.png",
   },
   {
     period: "2021–2025",
-    org: "AmorSaúde",
+    org: "AmorSaúde Brasil",
     role: "CPO e CTO",
-    text: "Liderança de produto, tecnologia e inovação numa das maiores redes de clínicas do país. No mesmo ciclo, consultoria para Hospital Albert Einstein, Rede D'Or, Hapvida e Fleury.",
+    text: "Mais de 25 milhões de vidas impactadas na maior rede de clínicas médico-odontológicas do país. No mesmo ciclo, consultoria ao Hospital Israelita Albert Einstein, à Hapvida, à Rede D'Or e à Prevent Senior.",
     logo: "/marcas/logo_amorsaude.png",
   },
   {
@@ -86,21 +86,29 @@ export const timeline = [
 
 export const parallels = [
   {
-    label: "Professor",
-    detail: "IA aplicada a negócios na Escola Prudem, em Ipatinga, Minas Gerais.",
-    logo: "/marcas/logo_prudem.jpeg",
+    label: "Colunista",
+    detail:
+      "Zumm, revista impressa e portal do Grupo Zumm, o Mundo Zumm. A mídia mais importante de Ribeirão Preto, no papel e no digital.",
+    href: "https://portalzumm.com.br/",
   },
   {
-    label: "Conselheiro",
-    detail: "Rede Líderes Digitais, com lideranças de tecnologia, gente, jurídico e compliance.",
-  },
-  {
-    label: "Palestrante",
-    detail: "Inteligência artificial, projetos, carreira em tecnologia e alta performance.",
+    label: "Destaque",
+    detail:
+      "Líder Destaque do Ano em tecnologia em saúde, reconhecimento da Rede Líderes, comunidade em que também é conselheiro.",
   },
   {
     label: "Coautor",
-    detail: "Como Decidem as Lideranças e Como Pensam as Lideranças.",
+    detail:
+      "Dois livros: Como Decidem as Lideranças e Como Pensam as Lideranças. Em Produto e Tecnologia, da Editora da Rede Líderes, assina o capítulo sobre trunk-based development.",
+  },
+  {
+    label: "Professor",
+    detail: "IA aplicada a negócios na Escola Prudem, em Ipatinga, Minas Gerais. A aula é o curso. A mentoria, não.",
+    logo: "/marcas/logo_prudem.png",
+  },
+  {
+    label: "Palestrante",
+    detail: "Inteligência artificial, método de projetos, carreira em tecnologia e alta performance.",
   },
 ] as const;
 
@@ -128,9 +136,9 @@ export const education = [
 export const certifications = [
   { name: "PMP", place: "Project Management Institute", year: "2016", logo: "/marcas/logo_pmi.png" },
   { name: "Oracle Cloud", place: "Oracle", year: "2022", logo: "/marcas/logo_oracle.png" },
-  { name: "ITIL 4", place: "PeopleCert / Axelos", year: "2022", logo: "/marcas/logo_itil.jpg" },
+  { name: "ITIL 4", place: "PeopleCert / Axelos", year: "2022", logo: "/marcas/logo_itil.png" },
   { name: "PM3", place: "Produto", year: "2022", logo: "/marcas/logo_pm3.png" },
-  { name: "AWS Cloud", place: "Amazon Web Services", year: "2025", logo: "/marcas/logo_aws.jpg" },
+  { name: "AWS Cloud", place: "Amazon Web Services", year: "2025", logo: "/marcas/logo_aws.png" },
 ] as const;
 
 export const mit = {
@@ -165,17 +173,22 @@ export const faqHome: Faq[] = [
   {
     question: "Quem é Olsen Rodrigo?",
     answer:
-      "Olsen Rodrigo Mott Silva, da marca EAIOLSEN, é CEO e fundador da Sintetiza AI. Tem mais de 18 anos em tecnologia aplicada a negócios, com a carreira concentrada em saúde. Formou-se em Informática Biomédica na USP de Ribeirão Preto, fez MBA na FGV e especialização executiva de CTO no Insper. É pai, fala de fé, família e alta performance, e treina jiu-jitsu.",
+      "Olsen Rodrigo Mott Silva, da marca EAIOLSEN, é CEO e fundador da Sintetiza AI e gerente de projetos certificado PMP desde 2016. Tem mais de 18 anos em tecnologia aplicada a negócios, com a carreira concentrada em saúde. Formou-se em Informática Biomédica na USP de Ribeirão Preto, fez MBA na FGV e especialização executiva de CTO no Insper. É pai, fala de fé, família e alta performance, treina jiu-jitsu e é colunista da Zumm, em Ribeirão Preto.",
   },
   {
     question: "Qual foi o resultado mais relevante da carreira dele?",
     answer:
-      "Na Matrix Saúde, entre 2009 e 2021, arquitetou o maior sistema de gestão para clínicas do Brasil. A operação alcançou mais de 25 milhões de vidas. Depois foi CPO e CTO da AmorSaúde e consultor de instituições como Hospital Albert Einstein, Rede D'Or, Hapvida e Fleury.",
+      "Na AmorSaúde Brasil, como CPO e CTO, a operação impactou mais de 25 milhões de vidas. Antes, por doze anos na Matrix Saúde, trabalhou nos sistemas que processam 70 milhões de exames por mês, por onde passa cerca de um terço da medicina laboratorial do Brasil. Também foi consultor do Hospital Israelita Albert Einstein, da Hapvida, da Rede D'Or e da Prevent Senior.",
+  },
+  {
+    question: "Por que ele insiste em projeto?",
+    answer:
+      "Porque inteligência artificial sem projeto acelera o erro. O método é o de um PMP: diagnóstico, escopo, dono, risco e o que significa pronto. Foi treinado em saúde, onde um fluxo ruim vira fila, laudo ou paciente. A mesma disciplina serve para qualquer área.",
   },
   {
     question: "O que Olsen oferece neste site?",
     answer:
-      "Mentoria para quem lidera e precisa de critério para usar inteligência artificial. Consultoria para a empresa que precisa decidir antes de construir. A construção de produto, quando cabe, acontece na Sintetiza AI.",
+      "Mentoria para quem lidera e precisa decidir com método de projeto. Consultoria para a empresa que precisa desse julgamento antes de construir. A construção, quando cabe, acontece na Sintetiza AI.",
   },
 ];
 
@@ -193,7 +206,7 @@ export const faqMentoria: Faq[] = [
   {
     question: "O que a pessoa leva da mentoria?",
     answer:
-      "Critério. Uma forma de olhar um problema de inteligência artificial e sair com uma decisão: fazer, adiar ou recusar, com o risco nomeado. O objetivo é a pessoa decidir melhor na semana seguinte, dentro da empresa dela.",
+      "Um jeito de transformar a dúvida em projeto: o que entra no escopo, o que fica de fora, quem é o dono e como a exceção é tratada. O objetivo é a pessoa decidir melhor na semana seguinte, dentro da empresa dela, em qualquer setor.",
   },
   {
     question: "A mentoria inclui construir o sistema?",
@@ -211,7 +224,7 @@ export const faqConsultoria: Faq[] = [
   {
     question: "Para que tipo de empresa isso serve?",
     answer:
-      "Para empresas em que erro operacional custa caro: saúde, serviços, varejo, financeiro e operações com muito atendimento. O método nasceu em missão crítica. O setor pode ser outro. A régua de responsabilidade permanece.",
+      "Para empresas em que erro operacional custa caro, em qualquer setor. O método nasceu em missão crítica de saúde e se porta: o que não muda é escopo, risco, dono e a definição de pronto.",
   },
   {
     question: "Quanto custa e em quanto tempo começa?",
@@ -229,6 +242,6 @@ export const faqFormacao: Faq[] = [
   {
     question: "Quais certificações profissionais ele tem?",
     answer:
-      "PMP desde 2016, Oracle Cloud, ITIL 4 e PM3 em 2022, e AWS Cloud em 2025.",
+      "A que organiza o trabalho é o PMP, Project Management Professional, desde 2016. Também tem Oracle Cloud, ITIL 4 e PM3 em 2022, e AWS Cloud em 2025. Todo trabalho dele, mentoria inclusive, parte de método de projeto.",
   },
 ];

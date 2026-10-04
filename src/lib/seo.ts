@@ -25,7 +25,7 @@ const person = {
   image: `${site.url}/fotos/olsen-retrato.jpg`,
   jobTitle: "CEO e fundador da Sintetiza AI",
   description:
-    "Mais de 18 anos em tecnologia aplicada a negócios, com foco em saúde. Mentoria e consultoria para decisões de inteligência artificial. Pai, em Ribeirão Preto.",
+    "Gerente de projetos certificado PMP. Mais de 18 anos em tecnologia aplicada a negócios, com foco em saúde. Mentoria e consultoria para decidir o uso de inteligência artificial com método de projeto. Ribeirão Preto.",
   email: site.email,
   telephone: `+${site.whatsapp}`,
   nationality: { "@type": "Country", name: "Brasil" },
@@ -67,6 +67,8 @@ const person = {
     "Inteligência artificial aplicada a negócios",
     "Decisão executiva",
     "Tecnologia em saúde",
+    "Gerenciamento de projetos",
+    "PMP",
     "Gestão de produto",
     "Liderança de tecnologia",
     "Governança de inteligência artificial",

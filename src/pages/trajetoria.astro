@@ -5,7 +5,7 @@ import { parallels, timeline } from "../data/profile";
 
 const title = "Trajetória de Olsen Rodrigo | EAIOLSEN";
 const description =
-  "De 2004 à Sintetiza AI: Edumed, Hemocentro da USP, doze anos na Matrix, C-level na AmorSaúde, Play Technology e a fundação da Sintetiza em 2025.";
+  "De 2004 à Sintetiza AI: Edumed, Hemocentro da USP, doze anos na Matrix, C-level na AmorSaúde Brasil, Play Technology e a fundação da Sintetiza em 2025.";
 ---
 
 <Base title={title} description={description} page="trajetoria" path="/trajetoria/">
@@ -23,8 +23,10 @@ const description =
     <div class="wrap">
       <p class="lead">
         Olsen Rodrigo passou mais de 18 anos onde tecnologia e operação se encontram.
-        O trecho longo é a Matrix. O trecho de liderança formal é a AmorSaúde.
-        O trecho atual é a Sintetiza AI, empresa que ele fundou em dezembro de 2025.
+        O trecho longo é a Matrix, nos sistemas que processam 70 milhões de exames
+        por mês. O trecho de liderança formal é a AmorSaúde Brasil, com mais de
+        25 milhões de vidas impactadas. O trecho atual é a Sintetiza AI, empresa
+        que ele fundou em dezembro de 2025. O fio dos três é projeto.
       </p>
       <ol class="timeline">
         {timeline.map((item) => (
@@ -57,15 +59,25 @@ const description =
       </figure>
       <div>
         <h2>Em paralelo à cadeira</h2>
+        <p class="lead">
+          A coluna na Zumm coloca o nome na mídia mais importante de Ribeirão Preto,
+          no impresso e no portal. O reconhecimento de Líder Destaque do Ano e os
+          dois livros vêm da mesma rede em que ele é conselheiro.
+        </p>
         <ul class="plain-list">
           {parallels.map((item) => (
             <li>
               <div class="when">{item.label}</div>
               <p>
-                {item.logo && (
+                {"logo" in item && item.logo && (
                   <span class="chip"><img src={item.logo} alt="" /></span>
                 )}
-                {" "}{item.detail}
+                {" "}
+                {"href" in item && item.href ? (
+                  <a class="ink-link" href={item.href}>{item.detail}</a>
+                ) : (
+                  item.detail
+                )}
               </p>
             </li>
           ))}

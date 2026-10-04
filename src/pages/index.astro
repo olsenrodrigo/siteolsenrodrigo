@@ -6,7 +6,7 @@ import { faqHome, mit, site, whatsappLink } from "../data/profile";
 
 const title = "Olsen Rodrigo | Mentoria e consultoria em IA";
 const description =
-  "Olsen Rodrigo, CEO da Sintetiza AI. Mais de 18 anos em tecnologia e saúde. Mentoria e consultoria para decidir como usar inteligência artificial com responsabilidade.";
+  "Olsen Rodrigo, PMP e CEO da Sintetiza AI. Mentoria para lideranças que precisam decidir inteligência artificial com método de projeto, a partir de missão crítica em saúde.";
 ---
 
 <Base title={title} description={description} page="home" path="/" ogType="profile">
@@ -17,13 +17,13 @@ const description =
         <p class="slogan">{site.slogan}</p>
         <hr class="sig" />
         <p class="dek">
-          CEO da Sintetiza AI. Mais de 18 anos ligando tecnologia a negócio em lugares
-          onde erro custa caro, quase todos na saúde. Este site é a pessoa: a trajetória,
-          a sala de aula e as conversas de mentoria e consultoria.
+          Gerente de projetos certificado. CEO da Sintetiza AI. Mais de 18 anos em
+          lugares onde erro custa caro. A mentoria existe para quem precisa decidir
+          antes de automatizar, com o mesmo método da missão crítica.
         </p>
         <div class="hero-actions">
-          <a class="link" href="/mentoria/">Mentoria para quem lidera</a>
-          <a class="link" href="/consultoria/">Consultoria para a empresa</a>
+          <a class="link" href={whatsappLink("mentoria")}>Pedir uma conversa de mentoria</a>
+          <a class="link" href="/mentoria/">Como a mentoria funciona</a>
         </div>
       </div>
       <figure class="hero-photo">
@@ -42,18 +42,49 @@ const description =
     <div class="wrap">
       <ul class="proofs">
         <li>
-          <strong>18 anos</strong>
-          <span>de tecnologia aplicada a negócio, com o peso da carreira na saúde.</span>
+          <strong>PMP desde 2016</strong>
+          <span>Todo trabalho cabe em projeto: escopo, risco, dono e o que significa pronto.</span>
         </li>
         <li>
           <strong>25 milhões</strong>
-          <span>de vidas no sistema de clínicas que ele arquitetou na Matrix Saúde.</span>
+          <span>de vidas impactadas na AmorSaúde Brasil, como CPO e CTO.</span>
         </li>
         <li>
-          <strong>C-level</strong>
-          <span>CPO e CTO da AmorSaúde. Consultor de Einstein, Rede D'Or, Hapvida e Fleury.</span>
+          <strong>70 milhões</strong>
+          <span>de exames por mês nos sistemas da Matrix. Um terço da medicina laboratorial do Brasil passa por ali.</span>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <section class="band band-alt" aria-labelledby="metodo">
+    <div class="wrap method">
+      <div>
+        <h2 id="metodo">Ninguém automatiza o que não virou projeto</h2>
+        <p class="lead">
+          A inteligência artificial da moda não resolve o problema da empresa.
+          Não porque a tecnologia seja ruim. Porque ninguém fez o projeto.
+        </p>
+        <p class="muted">
+          O ofício foi treinado em saúde, onde um fluxo ruim vira fila, laudo ou
+          paciente. O método viaja. Varejo, serviço, indústria ou saúde: missão
+          crítica é saber o que não pode falhar e quem responde quando falha.
+        </p>
+      </div>
+      <ol>
+        <li>
+          <p><strong>Diagnóstico.</strong> Onde a operação perde tempo, dinheiro ou cliente.</p>
+        </li>
+        <li>
+          <p><strong>Projeto.</strong> O que a inteligência decide sozinha, o que devolve ao humano, como a exceção é tratada.</p>
+        </li>
+        <li>
+          <p><strong>Fundação.</strong> Dado organizado, integração com o que já existe, segurança.</p>
+        </li>
+        <li>
+          <p><strong>Só então a ferramenta.</strong> Escolhida pelo resultado, não pela moda da semana.</p>
+        </li>
+      </ol>
     </div>
   </section>
 

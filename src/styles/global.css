@@ -1,33 +1,29 @@
-@import "@fontsource/fraunces/latin-400.css";
-@import "@fontsource/fraunces/latin-ext-400.css";
-@import "@fontsource/fraunces/latin-500.css";
-@import "@fontsource/fraunces/latin-ext-500.css";
-@import "@fontsource/fraunces/latin-600.css";
-@import "@fontsource/fraunces/latin-ext-600.css";
-@import "@fontsource/fraunces/latin-400-italic.css";
-@import "@fontsource/fraunces/latin-ext-400-italic.css";
-@import "@fontsource/sora/latin-400.css";
-@import "@fontsource/sora/latin-ext-400.css";
-@import "@fontsource/sora/latin-500.css";
-@import "@fontsource/sora/latin-ext-500.css";
-@import "@fontsource/sora/latin-600.css";
-@import "@fontsource/sora/latin-ext-600.css";
+@import "@fontsource/outfit/latin-500.css";
+@import "@fontsource/outfit/latin-ext-500.css";
+@import "@fontsource/outfit/latin-600.css";
+@import "@fontsource/outfit/latin-ext-600.css";
+@import "@fontsource/outfit/latin-700.css";
+@import "@fontsource/outfit/latin-ext-700.css";
+@import "@fontsource/source-sans-3/latin-400.css";
+@import "@fontsource/source-sans-3/latin-ext-400.css";
+@import "@fontsource/source-sans-3/latin-600.css";
+@import "@fontsource/source-sans-3/latin-ext-600.css";
 
 :root {
-  --ink: #141311;
-  --ink-2: #221f1b;
-  --bone: #f3efe7;
-  --bone-2: #e7e1d6;
-  --text: #1c1915;
-  --muted: #5c564c;
-  --line: rgba(28, 25, 21, 0.14);
-  --line-light: rgba(243, 239, 231, 0.16);
-  --paper: #f7f4ee;
-  --cyan: #2ad4d4;
+  --ink: #063246;
+  --on-dark: #f4fbfb;
+  --bone: #f4fbfb;
+  --paper: #f4fbfb;
+  --paper-2: #e5f4f6;
+  --text: #14343d;
+  --muted: #4c6a72;
+  --line: rgba(6, 50, 70, 0.14);
+  --line-light: rgba(244, 251, 251, 0.2);
+  --cyan: #12c8d4;
   --petrol: #0e78b4;
-  --sig: linear-gradient(90deg, #3ef0ea 0%, #14c4d4 48%, #0e78b4 100%);
-  --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
-  --sans: "Sora", "Avenir Next", "Segoe UI", sans-serif;
+  --sig: linear-gradient(90deg, #3ef0ea 0%, #14c4d4 46%, #0e78b4 100%);
+  --display: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+  --sans: "Source Sans 3", "Avenir Next", "Segoe UI", sans-serif;
   --measure: 68ch;
   --page: 1120px;
 }
@@ -40,7 +36,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--bone);
+  background: var(--paper);
   color: var(--text);
   font-family: var(--sans);
   font-size: 1.05rem;
@@ -59,13 +55,13 @@ a { color: inherit; }
   outline-offset: 3px;
 }
 
-::selection { background: #1a6a72; color: #fff; }
+::selection { background: #b7eef2; color: var(--ink); }
 
 .skip {
   position: absolute;
   left: 1rem;
   top: -4rem;
-  background: var(--bone);
+  background: var(--paper);
   color: var(--ink);
   padding: 0.6rem 0.9rem;
   z-index: 20;
@@ -106,12 +102,13 @@ a { color: inherit; }
 
 .nav-links a {
   text-decoration: none;
-  color: rgba(243, 239, 231, 0.78);
-  font-size: 0.95rem;
+  color: rgba(244, 251, 251, 0.82);
+  font-size: 0.98rem;
+  font-weight: 600;
 }
 
 .nav-links a[aria-current="page"] {
-  color: var(--bone);
+  color: #fff;
   box-shadow: inset 0 -2px 0 var(--cyan);
 }
 
@@ -121,9 +118,9 @@ a { color: inherit; }
 }
 
 .hero {
-  background: var(--ink);
-  color: var(--bone);
-  padding: 1.5rem 0 0;
+  background: var(--paper);
+  color: var(--text);
+  padding: 2.2rem 0 0.4rem;
 }
 
 .hero-grid {
@@ -140,28 +137,30 @@ a { color: inherit; }
 .paths > *,
 .feature > * { min-width: 0; }
 
-h1, h2, h3, .slogan {
-  font-family: var(--serif);
-  font-weight: 560;
-  letter-spacing: -0.03em;
-  line-height: 1.02;
+h1, h2, h3, .slogan, .row-title, .proofs strong, .qa h3, .quote-band blockquote {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
 }
 
 h1 {
-  margin: 0.2rem 0 0.7rem;
-  font-size: clamp(3.2rem, 6vw, 6rem);
-  font-weight: 600;
+  margin: 0.15rem 0 0.55rem;
+  font-size: clamp(3.1rem, 6vw, 5.4rem);
+  font-weight: 700;
   max-width: 100%;
   text-wrap: balance;
+  color: var(--ink);
 }
 
 .slogan {
   margin: 0;
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
-  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
   line-height: 1.25;
-  max-width: 18ch;
+  max-width: 22ch;
+  color: var(--petrol);
 }
 
 .sig {
@@ -175,8 +174,8 @@ h1 {
 .dek {
   max-width: var(--measure);
   margin: 0;
-  color: rgba(243, 239, 231, 0.82);
-  font-size: 1.05rem;
+  color: var(--text);
+  font-size: 1.12rem;
 }
 
 .hero-actions {
@@ -190,21 +189,29 @@ h1 {
   margin: 0;
 }
 
+.hero-photo picture,
+.frame picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
 .hero-photo img,
 .frame img {
   width: 100%;
+  height: 100%;
+  max-height: none;
   object-fit: cover;
   object-position: center 16%;
 }
 
-.hero-photo img {
-  aspect-ratio: 4 / 5;
-  max-height: 78vh;
-}
-
 .link {
-  color: var(--bone);
+  color: var(--petrol);
+  font-weight: 600;
   text-underline-offset: 0.22em;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--cyan);
 }
 
 .ink-link {
@@ -247,12 +254,11 @@ h1 {
 
 .proofs strong {
   display: block;
-  font-family: var(--serif);
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 560;
-  letter-spacing: -0.03em;
-  line-height: 1;
+  font-size: clamp(1.7rem, 2.6vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.05;
   margin-bottom: 0.55rem;
+  color: var(--ink);
 }
 
 .proofs span { color: var(--muted); }
@@ -266,11 +272,6 @@ h1 {
 
 .frame { margin: 0; width: 100%; }
 
-.frame img {
-  aspect-ratio: 4 / 5;
-  height: auto;
-}
-
 .frame figcaption,
 .note {
   margin-top: 0.55rem;
@@ -279,23 +280,21 @@ h1 {
 }
 
 .quote-band {
-  background: var(--ink);
-  color: var(--bone);
-  padding: 4.2rem 0;
+  background: var(--paper-2);
+  color: var(--ink);
+  padding: 3.6rem 0;
 }
 
 .quote-band blockquote {
   margin: 0;
-  font-family: var(--serif);
-  font-weight: 500;
-  font-style: italic;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  line-height: 1.18;
-  letter-spacing: -0.03em;
-  max-width: 18ch;
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(1.7rem, 3.4vw, 2.7rem);
+  line-height: 1.2;
+  max-width: 22ch;
 }
 
-.quote-band p { margin: 1.2rem 0 0; color: rgba(243, 239, 231, 0.72); }
+.quote-band p { margin: 1.1rem 0 0; color: var(--muted); }
 
 .paths {
   display: grid;
@@ -313,20 +312,21 @@ h1 {
 .paths p { max-width: 42ch; }
 
 .page-head {
-  background: var(--ink);
-  color: var(--bone);
-  padding: 3.2rem 0 2.8rem;
+  background: var(--paper);
+  color: var(--text);
+  padding: 2.6rem 0 0.4rem;
 }
 
 .page-head h1 {
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  max-width: 12ch;
+  font-size: clamp(2.6rem, 5.4vw, 4.4rem);
+  max-width: 14ch;
 }
 
 .page-head p {
   max-width: var(--measure);
-  color: rgba(243, 239, 231, 0.8);
-  margin: 0.4rem 0 0;
+  color: var(--muted);
+  margin: 0.35rem 0 0;
+  font-size: 1.12rem;
 }
 
 .timeline,
@@ -358,10 +358,8 @@ h1 {
   align-items: center;
   gap: 0.7rem 0.9rem;
   margin: 0;
-  font-family: var(--serif);
-  font-size: 1.55rem;
-  font-weight: 560;
-  letter-spacing: -0.03em;
+  font-size: 1.45rem;
+  font-weight: 600;
 }
 
 .role { margin: 0.15rem 0 0.35rem; color: var(--petrol); font-weight: 600; }
@@ -370,37 +368,37 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  min-width: 4.6rem;
-  height: 2.5rem;
-  padding: 0.25rem 0.45rem;
+  background: transparent;
+  height: 2.35rem;
+  padding: 0;
 }
 
 .chip img {
-  max-height: 1.7rem;
-  max-width: 5.6rem;
+  max-height: 2.05rem;
+  max-width: 6.4rem;
   width: auto;
   object-fit: contain;
 }
 
 .feature {
   margin-top: 2.4rem;
-  background: var(--ink);
-  color: var(--bone);
+  background: var(--paper-2);
+  color: var(--text);
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   gap: 1.3rem 1.6rem;
-  padding: 1.6rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.35rem;
+  border-left: 4px solid var(--petrol);
 }
 
 .feature h2 {
-  color: var(--bone);
+  color: var(--ink);
   margin: 0.2rem 0 0.45rem;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  max-width: 16ch;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  max-width: 18ch;
 }
 
-.feature p { margin: 0.4rem 0; color: rgba(243, 239, 231, 0.82); }
+.feature p { margin: 0.4rem 0; color: var(--text); }
 
 .feature .chip { align-self: start; }
 
@@ -420,11 +418,9 @@ h1 {
 
 .qa h3 {
   margin: 0 0 0.35rem;
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 560;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  font-size: 1.28rem;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 .qa p { margin: 0; max-width: var(--measure); }
@@ -445,9 +441,47 @@ h1 {
 
 .contact-list a { font-weight: 600; }
 
+.band-alt { background: var(--paper-2); }
+
+.method {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.5rem 3rem;
+  align-items: start;
+}
+
+.method ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.method li {
+  counter-increment: step;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr);
+  gap: 0.7rem;
+}
+
+.method li::before {
+  content: counter(step);
+  font-family: var(--display);
+  font-weight: 700;
+  color: var(--petrol);
+}
+
+.method li p { margin: 0; }
+
+.hero-photo img {
+  box-shadow: 0 18px 40px rgba(6, 50, 70, 0.12);
+}
+
 .footer {
   background: var(--ink);
-  color: rgba(243, 239, 231, 0.78);
+  color: rgba(244, 251, 251, 0.8);
   padding: 2rem 0 2.4rem;
 }
 
@@ -483,6 +517,7 @@ h1 {
   .hero-grid,
   .split,
   .paths,
+  .method,
   .proofs,
   .timeline li,
   .plain-list li,
@@ -505,7 +540,7 @@ h1 {
     padding: 0 0 1rem;
   }
 
-  .hero-photo img { max-height: 78vw; aspect-ratio: 4 / 5; object-position: center 10%; }
+  .hero-photo img { object-position: center 12%; }
   h1 { font-size: 2.7rem; }
 }
 
