@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+import Faq from "../components/Faq.astro";
+import { site } from "../data/profile";
+import { copy, waHref, type Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = copy(lang);
+---
+
+<Base title={t.meta.consultoria.title} description={t.meta.consultoria.description} page="consultoria" path="/consultoria/" lang={lang}>
+  <header class="page-head">
+    <div class="wrap">
+      <h1 data-i18n="consultoria.title">{t.consultoria.title}</h1>
+      <p data-i18n="consultoria.intro">{t.consultoria.intro}</p>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="lead" data-i18n="consultoria.lead">{t.consultoria.lead}</p>
+      <p class="muted" data-i18n="consultoria.muted">{t.consultoria.muted}</p>
+
+      <div class="paths" style="margin-top: 2.4rem">
+        <article>
+          <h2 data-i18n="consultoria.withOlsenTitle">{t.consultoria.withOlsenTitle}</h2>
+          <p data-i18n="consultoria.withOlsen">{t.consultoria.withOlsen}</p>
+        </article>
+        <article>
+          <h2 data-i18n="consultoria.withCompanyTitle">{t.consultoria.withCompanyTitle}</h2>
+          <p>
+            <span data-i18n="consultoria.withBefore">{t.consultoria.withBefore}</span><a href={site.sintetiza}>Sintetiza AI</a><span data-i18n="consultoria.withAfter">{t.consultoria.withAfter}</span>
+          </p>
+        </article>
+      </div>
+
+      <p style="margin-top: 2rem">
+        <a class="ink-link" href={waHref(lang, "consultoria")} data-wa="consultoria" data-i18n="cta.consultoria">{t.cta.consultoria}</a>
+      </p>
+    </div>
+  </section>
+
+  <Faq items={t.faq.consultoria} title={t.faq.before} titleKey="faq.before" prefix="faq.consultoria" />
+</Base>

@@ -1,13 +1,21 @@
 ---
 import { site } from "../data/profile";
+import { copy, localePath, type Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = copy(lang);
 const year = new Date().getFullYear();
 ---
 
 <footer class="footer">
   <div class="footer-inner">
     <div>
-      <a href="/">{site.brand}</a>
-      <small>{site.city}, {site.region}. {site.country}.</small>
+      <a href={localePath(lang, "/")} data-locale-href="/">{site.brand}</a>
+      <small>{site.city}, {site.region}. <span data-i18n="chrome.country">{t.chrome.country}</span>.</small>
     </div>
     <div>
       <a href={`mailto:${site.email}`}>{site.email}</a>

@@ -1,0 +1,52 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/profile";
+import { copy, waHref, type Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = copy(lang);
+---
+
+<Base title={t.meta.contato.title} description={t.meta.contato.description} page="contato" path="/contato/" lang={lang}>
+  <header class="page-head">
+    <div class="wrap">
+      <h1 data-i18n="contato.title">{t.contato.title}</h1>
+      <p data-i18n="contato.intro">{t.contato.intro}</p>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap">
+      <ul class="contact-list">
+        <li>
+          <span>WhatsApp</span>
+          <a href={waHref(lang, "decisao")} data-wa="decisao">{site.whatsappDisplay}</a>
+        </li>
+        <li>
+          <span data-i18n="contato.email">{t.contato.email}</span>
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </li>
+        <li>
+          <span>Instagram</span>
+          <a href={site.instagram} rel="me">@olsenrodrigo</a>
+        </li>
+        <li>
+          <span>LinkedIn</span>
+          <a href={site.linkedin} rel="me">Olsen Rodrigo Mott Silva</a>
+        </li>
+        <li>
+          <span data-i18n="contato.company">{t.contato.company}</span>
+          <a href={site.sintetiza}>sintetiza.ai</a>
+        </li>
+        <li>
+          <span data-i18n="contato.where">{t.contato.where}</span>
+          <span>{site.city}, {site.region}</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,159 @@
+---
+import Base from "../layouts/Base.astro";
+import Photo from "../components/Photo.astro";
+import Faq from "../components/Faq.astro";
+import { zummArticles } from "../data/profile";
+import { copy, localePath, waHref, type Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = copy(lang);
+---
+
+<Base title={t.meta.home.title} description={t.meta.home.description} page="home" path="/" lang={lang} ogType="profile">
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1>Olsen<br />Rodrigo</h1>
+        <p class="slogan" data-i18n="slogan">{t.slogan}</p>
+        <hr class="sig" />
+        <p class="dek" data-i18n="home.dek">{t.home.dek}</p>
+        <div class="hero-actions">
+          <a class="link" href={waHref(lang, "mentoria")} data-wa="mentoria" data-i18n="cta.mentoria">{t.cta.mentoria}</a>
+          <a class="link" href={localePath(lang, "/mentoria/")} data-locale-href="/mentoria/" data-i18n="home.ctaHow">{t.home.ctaHow}</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <Photo
+          name="olsen-retrato"
+          alt={t.home.heroAlt}
+          altKey="home.heroAlt"
+          width={1400}
+          height={2100}
+          priority
+        />
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" aria-label={t.home.proofsLabel} data-i18n-aria="home.proofsLabel">
+    <div class="wrap">
+      <ul class="proofs">
+        {t.home.proofs.map((item, index) => (
+          <li>
+            <strong data-i18n={`home.proofs.${index}.title`}>{item.title}</strong>
+            <span data-i18n={`home.proofs.${index}.text`}>{item.text}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="band band-alt" aria-labelledby="metodo">
+    <div class="wrap method">
+      <div>
+        <h2 id="metodo" data-i18n="home.methodTitle">{t.home.methodTitle}</h2>
+        <p class="lead" data-i18n="home.methodLead">{t.home.methodLead}</p>
+        <p class="muted" data-i18n="home.methodMuted">{t.home.methodMuted}</p>
+      </div>
+      <ol>
+        {t.home.steps.map((step, index) => (
+          <li>
+            <p>
+              <strong data-i18n={`home.steps.${index}.name`}>{step.name}</strong>
+              {" "}
+              <span data-i18n={`home.steps.${index}.text`}>{step.text}</span>
+            </p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top: 0" aria-labelledby="pessoa">
+    <div class="wrap split">
+      <figure class="frame">
+        <Photo
+          name="olsen-claro"
+          alt={t.home.personAlt}
+          altKey="home.personAlt"
+          width={1400}
+          height={2491}
+          priority
+        />
+        <figcaption data-i18n="home.personCaption">{t.home.personCaption}</figcaption>
+      </figure>
+      <div>
+        <h2 id="pessoa" data-i18n="home.personTitle">{t.home.personTitle}</h2>
+        <p class="lead" data-i18n="home.personLead">{t.home.personLead}</p>
+        <p class="muted" data-i18n="home.personMuted">{t.home.personMuted}</p>
+        <p>
+          <a class="ink-link" href={localePath(lang, "/trajetoria/")} data-locale-href="/trajetoria/" data-i18n="home.personLink">{t.home.personLink}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="wrap">
+      <blockquote data-i18n="signature">{t.signature}</blockquote>
+      <p data-i18n="home.quoteNote">{t.home.quoteNote}</p>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="coluna-home">
+    <div class="wrap">
+      <h2 id="coluna-home" data-i18n="home.columnTitle">{t.home.columnTitle}</h2>
+      <p class="lead" data-i18n="home.columnLead">{t.home.columnLead}</p>
+      <ul class="column-list">
+        {zummArticles.slice(0, 3).map((item, index) => (
+          <li>
+            <div class="when" data-i18n={`articles.${index}.date`}>{t.articles[index].date}</div>
+            <div>
+              <h3><a href={item.href} data-i18n={`articles.${index}.title`}>{t.articles[index].title}</a></h3>
+              <p data-i18n={`articles.${index}.excerpt`}>{t.articles[index].excerpt}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p class="note">
+        <a class="ink-link" href={`${localePath(lang, "/trajetoria/")}#coluna`} data-locale-href="/trajetoria/#coluna" data-i18n="home.columnMore">{t.home.columnMore}</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="caminhos">
+    <div class="wrap">
+      <div class="paths">
+        <article>
+          <h2 data-i18n="home.pathMentoriaTitle">{t.home.pathMentoriaTitle}</h2>
+          <p data-i18n="home.pathMentoriaText">{t.home.pathMentoriaText}</p>
+          <p>
+            <a class="ink-link" href={localePath(lang, "/mentoria/")} data-locale-href="/mentoria/" data-i18n="home.pathMentoriaLink">{t.home.pathMentoriaLink}</a>
+          </p>
+        </article>
+        <article>
+          <h2 data-i18n="home.pathConsultoriaTitle">{t.home.pathConsultoriaTitle}</h2>
+          <p data-i18n="home.pathConsultoriaText">{t.home.pathConsultoriaText}</p>
+          <p>
+            <a class="ink-link" href={localePath(lang, "/consultoria/")} data-locale-href="/consultoria/" data-i18n="home.pathConsultoriaLink">{t.home.pathConsultoriaLink}</a>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <Faq items={t.faq.home} title={t.faq.title} titleKey="faq.title" prefix="faq.home" />
+
+  <section class="band" style="padding-top: 0">
+    <div class="wrap">
+      <p class="lead" data-i18n="home.closing">{t.home.closing}</p>
+      <p>
+        <a class="ink-link" href={waHref(lang, "decisao")} data-wa="decisao" data-i18n="cta.whatsapp">{t.cta.whatsapp}</a>
+      </p>
+    </div>
+  </section>
+</Base>

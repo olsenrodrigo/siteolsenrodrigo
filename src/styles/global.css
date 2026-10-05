@@ -70,6 +70,8 @@ a { color: inherit; }
 .skip:focus { top: 1rem; }
 
 .mast {
+  position: relative;
+  z-index: 20;
   background: var(--ink);
   color: var(--bone);
 }
@@ -90,6 +92,95 @@ a { color: inherit; }
 }
 
 .brand img { height: 30px; width: auto; }
+
+.mast-end {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.7rem 1.15rem;
+  margin-left: auto;
+}
+
+.lang { position: relative; }
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2rem;
+  padding: 0.2rem 0.6rem 0.2rem 0.35rem;
+  border: 1px solid rgba(244, 251, 251, 0.38);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--bone);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.flag-current { display: inline-flex; }
+.flag-current[hidden] { display: none; }
+
+.flag {
+  height: 15px;
+  width: auto;
+  display: block;
+  border-radius: 1.5px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.28);
+}
+
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.45rem);
+  z-index: 30;
+  min-width: 11.5rem;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: var(--paper);
+  color: var(--text);
+  border-radius: 10px;
+  box-shadow: 0 14px 36px rgba(6, 50, 70, 0.2);
+}
+
+.lang-menu[hidden] { display: none; }
+
+.lang-menu button {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  min-height: 2.3rem;
+  padding: 0.4rem 0.55rem;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.98rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lang-menu button > span:first-child { display: inline-flex; }
+
+.lang-menu button[aria-selected="true"],
+.lang-menu button:hover { background: var(--paper-2); }
+
+html[lang^="zh"] {
+  --sans: "Source Sans 3", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --display: "Outfit", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+html[lang^="zh"] body { line-height: 1.75; }
+
+html[lang^="zh"] :is(h1, h2, h3, .slogan, .row-title, .proofs strong, .qa h3, .quote-band blockquote) {
+  letter-spacing: 0;
+}
 
 .nav-links {
   display: flex;
@@ -535,8 +626,10 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
   }
+  .mast-end { width: 100%; margin-left: 0; }
   .mast-inner nav,
   .nav-links { width: 100%; }
+  .lang { margin-left: auto; }
   .nav-links { gap: 0.55rem 1rem; }
   .nav-links a { font-size: 0.95rem; }
 

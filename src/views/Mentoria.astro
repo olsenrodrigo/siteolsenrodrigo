@@ -1,0 +1,50 @@
+---
+import Base from "../layouts/Base.astro";
+import Photo from "../components/Photo.astro";
+import Faq from "../components/Faq.astro";
+import { copy, waHref, type Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = copy(lang);
+---
+
+<Base title={t.meta.mentoria.title} description={t.meta.mentoria.description} page="mentoria" path="/mentoria/" lang={lang}>
+  <header class="page-head">
+    <div class="wrap">
+      <h1 data-i18n="mentoria.title">{t.mentoria.title}</h1>
+      <p data-i18n="mentoria.intro">{t.mentoria.intro}</p>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap split">
+      <figure class="frame">
+        <Photo
+          name="olsen-estudio"
+          alt={t.mentoria.alt}
+          altKey="mentoria.alt"
+          width={1400}
+          height={2491}
+        />
+        <figcaption data-i18n="mentoria.caption">{t.mentoria.caption}</figcaption>
+      </figure>
+      <div>
+        <h2 data-i18n="mentoria.whoTitle">{t.mentoria.whoTitle}</h2>
+        <p class="lead" data-i18n="mentoria.whoLead">{t.mentoria.whoLead}</p>
+        <p class="muted" data-i18n="mentoria.whoMuted">{t.mentoria.whoMuted}</p>
+        <h2 data-i18n="mentoria.whatTitle">{t.mentoria.whatTitle}</h2>
+        <p data-i18n="mentoria.what1">{t.mentoria.what1}</p>
+        <p data-i18n="mentoria.what2">{t.mentoria.what2}</p>
+        <p>
+          <a class="ink-link" href={waHref(lang, "mentoria")} data-wa="mentoria" data-i18n="cta.mentoria">{t.cta.mentoria}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Faq items={t.faq.mentoria} title={t.faq.before} titleKey="faq.before" prefix="faq.mentoria" />
+</Base>

@@ -1,0 +1,30 @@
+---
+import Base from "../layouts/Base.astro";
+import { copy, localePath, type Lang } from "../i18n";
+
+interface Props {
+  lang?: Lang;
+}
+
+const { lang = "pt" } = Astro.props;
+const t = copy(lang);
+---
+
+<Base
+  title={t.meta.missing.title}
+  description={t.meta.missing.description}
+  page="404"
+  path="/404/"
+  lang={lang}
+  robots="noindex, follow"
+>
+  <section class="band missing">
+    <div class="wrap">
+      <h1 data-i18n="missing.title">{t.missing.title}</h1>
+      <p class="lead" data-i18n="missing.lead">{t.missing.lead}</p>
+      <p>
+        <a class="ink-link" href={localePath(lang, "/")} data-locale-href="/" data-i18n="missing.back">{t.missing.back}</a>
+      </p>
+    </div>
+  </section>
+</Base>

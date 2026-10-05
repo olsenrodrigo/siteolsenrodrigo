@@ -1,0 +1,102 @@
+---
+import Base from "../layouts/Base.astro";
+import Photo from "../components/Photo.astro";
+import { parallels, timeline, zummArticles, zummCategory } from "../data/profile";
+import { copy, type Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = copy(lang);
+---
+
+<Base title={t.meta.trajetoria.title} description={t.meta.trajetoria.description} page="trajetoria" path="/trajetoria/" lang={lang}>
+  <header class="page-head">
+    <div class="wrap">
+      <h1 data-i18n="trajetoria.title">{t.trajetoria.title}</h1>
+      <p data-i18n="trajetoria.intro">{t.trajetoria.intro}</p>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="lead" data-i18n="trajetoria.lead">{t.trajetoria.lead}</p>
+      <ol class="timeline">
+        {timeline.map((item, index) => (
+          <li>
+            <div class="when" data-i18n={`timeline.${index}.period`}>{t.timeline[index].period}</div>
+            <div>
+              <h2 class="row-title">
+                <span class="chip"><img src={item.logo} alt="" /></span>
+                {"href" in item && item.href ? <a href={item.href}>{item.org}</a> : item.org}
+              </h2>
+              <p class="role" data-i18n={`timeline.${index}.role`}>{t.timeline[index].role}</p>
+              <p class="muted" data-i18n={`timeline.${index}.text`}>{t.timeline[index].text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top: 0">
+    <div class="wrap split">
+      <figure class="frame">
+        <Photo
+          name="olsen-evento"
+          alt={t.trajetoria.photoAlt}
+          altKey="trajetoria.photoAlt"
+          width={1200}
+          height={1800}
+        />
+        <figcaption data-i18n="trajetoria.caption">{t.trajetoria.caption}</figcaption>
+      </figure>
+      <div>
+        <h2 data-i18n="trajetoria.parallelTitle">{t.trajetoria.parallelTitle}</h2>
+        <p class="lead" data-i18n="trajetoria.parallelLead">{t.trajetoria.parallelLead}</p>
+        <ul class="plain-list">
+          {parallels.map((item, index) => (
+            <li>
+              <div class="when" data-i18n={`parallels.${index}.label`}>{t.parallels[index].label}</div>
+              <div>
+                {item.logo && <img class="mark" src={item.logo} alt="" />}
+                <p>
+                  <span data-i18n={`parallels.${index}.detail`}>{t.parallels[index].detail}</span>
+                  {item.href && (
+                    <>
+                      {" "}
+                      <a class="ink-link" href={item.href} data-i18n="trajetoria.techDesk">{t.trajetoria.techDesk}</a>
+                    </>
+                  )}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-alt" id="coluna" aria-labelledby="coluna-titulo">
+    <div class="wrap">
+      <h2 id="coluna-titulo" data-i18n="home.columnTitle">{t.home.columnTitle}</h2>
+      <p class="lead" data-i18n="trajetoria.columnLead">{t.trajetoria.columnLead}</p>
+      <ul class="column-list">
+        {zummArticles.map((item, index) => (
+          <li>
+            <div class="when" data-i18n={`articles.${index}.date`}>{t.articles[index].date}</div>
+            <div>
+              <h3><a href={item.href} data-i18n={`articles.${index}.title`}>{t.articles[index].title}</a></h3>
+              <p data-i18n={`articles.${index}.excerpt`}>{t.articles[index].excerpt}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p class="note">
+        <a class="ink-link" href={zummCategory} data-i18n="trajetoria.techDeskLong">{t.trajetoria.techDeskLong}</a>
+      </p>
+    </div>
+  </section>
+</Base>

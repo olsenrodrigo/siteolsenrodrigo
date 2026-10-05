@@ -1,0 +1,21 @@
+---
+import Contato from "../../views/Contato.astro";
+import Consultoria from "../../views/Consultoria.astro";
+import Formacao from "../../views/Formacao.astro";
+import Mentoria from "../../views/Mentoria.astro";
+import Trajetoria from "../../views/Trajetoria.astro";
+import { FOREIGN, PAGES, type Foreign } from "../../i18n";
+
+export function getStaticPaths() {
+  return FOREIGN.flatMap((lang) => PAGES.map((page) => ({ params: { lang, page } })));
+}
+
+const lang = Astro.params.lang as Foreign;
+const page = Astro.params.page;
+---
+
+{page === "trajetoria" && <Trajetoria lang={lang} />}
+{page === "formacao" && <Formacao lang={lang} />}
+{page === "mentoria" && <Mentoria lang={lang} />}
+{page === "consultoria" && <Consultoria lang={lang} />}
+{page === "contato" && <Contato lang={lang} />}

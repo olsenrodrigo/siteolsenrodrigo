@@ -1,0 +1,87 @@
+---
+import { copy, langCode, LANGS, type Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = copy(lang);
+
+function star(cx: number, cy: number, r: number) {
+  const pts: string[] = [];
+  for (let i = 0; i < 10; i++) {
+    const rad = i % 2 === 0 ? r : r * 0.4;
+    const a = -Math.PI / 2 + (i * Math.PI) / 5;
+    pts.push(`${(cx + Math.cos(a) * rad).toFixed(2)},${(cy + Math.sin(a) * rad).toFixed(2)}`);
+  }
+  return pts.join(" ");
+}
+
+const stripeH = 100 / 13;
+const stripes = Array.from({ length: 13 }, (_, i) => {
+  const fill = i % 2 === 0 ? "#bf0a30" : "#ffffff";
+  return `<rect y="${(i * stripeH).toFixed(3)}" width="190" height="${(stripeH + 0.15).toFixed(3)}" fill="${fill}"/>`;
+}).join("");
+const cantonH = stripeH * 7;
+let stars = "";
+for (let row = 0; row < 9; row++) {
+  const count = row % 2 === 0 ? 6 : 5;
+  const y = ((row + 1) * cantonH) / 10;
+  for (let col = 0; col < count; col++) {
+    const x = count === 6 ? ((col + 1) * 76) / 7 : ((col + 1) * 76) / 6;
+    stars += `<polygon points="${star(x, y, 1.55)}" fill="#ffffff"/>`;
+  }
+}
+const usa = `<svg class="flag" viewBox="0 0 190 100" aria-hidden="true">${stripes}<rect width="76" height="${cantonH.toFixed(3)}" fill="#002868"/>${stars}</svg>`;
+
+const brazil = `<svg class="flag" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#009b3a"/><polygon points="10,1.15 18.55,7 10,12.85 1.45,7" fill="#fedd00"/><circle cx="10" cy="7" r="3.15" fill="#002776"/><path d="M7.15 7.55c1.5-1.15 3.9-1.05 5.55.35" fill="none" stroke="#ffffff" stroke-width="0.55" stroke-linecap="round"/></svg>`;
+
+const spain = `<svg class="flag" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#c60b1e"/><rect y="10" width="60" height="20" fill="#ffc400"/></svg>`;
+
+const chinaStars = [
+  { x: 5, y: 5, r: 3, turn: 0 },
+  { x: 10, y: 2, r: 1, turn: 1 },
+  { x: 12, y: 4, r: 1, turn: 1 },
+  { x: 12, y: 7, r: 1, turn: 1 },
+  { x: 10, y: 9, r: 1, turn: 1 },
+]
+  .map(({ x, y, r, turn }) => {
+    const angle = turn ? (Math.atan2(y - 5, x - 5) * 180) / Math.PI : 0;
+    const spin = turn ? ` transform="rotate(${angle.toFixed(2)} ${x} ${y})"` : "";
+    return `<polygon points="${star(x, y, r)}" fill="#ffde00"${spin}/>`;
+  })
+  .join("");
+const china = `<svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#de2910"/>${chinaStars}</svg>`;
+
+const flags: Record<Lang, string> = { pt: brazil, en: usa, es: spain, zh: china };
+const labels = { pt: t.chrome.langs.pt, en: t.chrome.langs.en, es: t.chrome.langs.es, zh: t.chrome.langs.zh };
+---
+
+<div class="lang" data-lang-root>
+  <button
+    type="button"
+    class="lang-btn"
+    data-lang-toggle
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-controls="lang-menu"
+    aria-label={t.chrome.langButton}
+    data-i18n-aria="chrome.langButton"
+  >
+    {LANGS.map((code) => (
+      <span class="flag-current" data-show-flag={code} hidden={code !== lang} set:html={flags[code]} />
+    ))}
+    <span data-lang-code>{langCode[lang]}</span>
+  </button>
+  <ul id="lang-menu" class="lang-menu" data-lang-menu role="listbox" hidden>
+    {LANGS.map((code) => (
+      <li>
+        <button type="button" data-lang-set={code} role="option" aria-selected={code === lang ? "true" : "false"}>
+          <span set:html={flags[code]} />
+          <span data-i18n={`chrome.langs.${code}`}>{labels[code]}</span>
+        </button>
+      </li>
+    ))}
+  </ul>
+</div>

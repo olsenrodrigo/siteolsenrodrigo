@@ -1,86 +1,14 @@
-import {
-  certifications,
-  education,
-  faqConsultoria,
-  faqFormacao,
-  faqHome,
-  faqMentoria,
-  zummArticles,
-  mit,
-  site,
-  timeline,
-  type Faq,
-} from "../data/profile";
+import { certifications, education, mit, site, timeline, zummArticles } from "../data/profile";
+import { copy, localePath, type Lang } from "../i18n";
 
 const personId = `${site.url}/#olsen`;
 const websiteId = `${site.url}/#website`;
 
-const person = {
-  "@type": "Person",
-  "@id": personId,
-  name: site.name,
-  alternateName: [site.brand, site.fullName],
-  givenName: "Olsen",
-  familyName: "Rodrigo Mott Silva",
-  url: site.url,
-  image: `${site.url}/fotos/olsen-retrato.jpg`,
-  jobTitle: "CEO e fundador da Sintetiza AI",
-  description:
-    "Gerente de projetos certificado PMP. Mais de 18 anos em tecnologia aplicada a negócios, com foco em saúde. Mentoria e consultoria para decidir o uso de inteligência artificial com método de projeto. Ribeirão Preto.",
-  email: site.email,
-  telephone: `+${site.whatsapp}`,
-  nationality: { "@type": "Country", name: "Brasil" },
-  homeLocation: {
-    "@type": "Place",
-    name: `${site.city}, ${site.region}`,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: site.city,
-      addressRegion: "SP",
-      addressCountry: "BR",
-    },
-  },
-  worksFor: {
-    "@type": "Organization",
-    name: "Sintetiza AI",
-    url: site.sintetiza,
-  },
-  alumniOf: [
-    { "@type": "CollegeOrUniversity", name: "Universidade de São Paulo, Ribeirão Preto" },
-    { "@type": "CollegeOrUniversity", name: "Fundação Getulio Vargas" },
-    { "@type": "CollegeOrUniversity", name: "Insper" },
-  ],
-  hasCredential: [
-    ...certifications.map((item) => ({
-      "@type": "EducationalOccupationalCredential",
-      name: `${item.name} (${item.year})`,
-      credentialCategory: "certification",
-      recognizedBy: { "@type": "Organization", name: item.place },
-    })),
-    ...education.map((item) => ({
-      "@type": "EducationalOccupationalCredential",
-      name: item.degree,
-      credentialCategory: "degree",
-      recognizedBy: { "@type": "Organization", name: item.place },
-    })),
-    {
-      "@type": "EducationalOccupationalCredential",
-      name: mit.name,
-      credentialCategory: "executive education",
-      description: mit.place,
-    },
-  ],
-  knowsAbout: [
-    "Inteligência artificial aplicada a negócios",
-    "Decisão executiva",
-    "Tecnologia em saúde",
-    "Gerenciamento de projetos",
-    "PMP",
-    "Gestão de produto",
-    "Liderança de tecnologia",
-    "Governança de inteligência artificial",
-  ],
-  sameAs: [site.instagram, site.linkedin, site.sintetiza, `${site.url}/`],
+const inLanguage: Record<Lang, string> = {
+  pt: "pt-BR",
+  en: "en",
+  es: "es",
+  zh: "zh-Hans",
 };
 
 function breadcrumb(items: { name: string; path: string }[]) {
@@ -95,13 +23,13 @@ function breadcrumb(items: { name: string; path: string }[]) {
   };
 }
 
-function faqNode(items: Faq[]) {
+function faqNode(items: { q: string; a: string }[]) {
   return {
     "@type": "FAQPage",
     mainEntity: items.map((item) => ({
       "@type": "Question",
-      name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
     })),
   };
 }
@@ -118,14 +46,76 @@ function serviceNode(name: string, description: string, path: string) {
   };
 }
 
-export function graphFor(page: string) {
+export function graphFor(page: string, lang: Lang = "pt") {
+  const t = copy(lang);
+  const language = inLanguage[lang];
+  const homePath = localePath(lang, "/");
+
+  const person = {
+    "@type": "Person",
+    "@id": personId,
+    name: site.name,
+    alternateName: [site.brand, site.fullName],
+    givenName: "Olsen",
+    familyName: "Rodrigo Mott Silva",
+    url: site.url,
+    image: `${site.url}/fotos/olsen-retrato.jpg`,
+    jobTitle: t.seo.jobTitle,
+    description: t.seo.personDescription,
+    email: site.email,
+    telephone: `+${site.whatsapp}`,
+    nationality: { "@type": "Country", name: t.seo.nationality },
+    homeLocation: {
+      "@type": "Place",
+      name: `${site.city}, ${site.region}`,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: site.city,
+        addressRegion: "SP",
+        addressCountry: "BR",
+      },
+    },
+    worksFor: {
+      "@type": "Organization",
+      name: "Sintetiza AI",
+      url: site.sintetiza,
+    },
+    alumniOf: [
+      { "@type": "CollegeOrUniversity", name: "Universidade de São Paulo, Ribeirão Preto" },
+      { "@type": "CollegeOrUniversity", name: "Fundação Getulio Vargas" },
+      { "@type": "CollegeOrUniversity", name: "Insper" },
+    ],
+    hasCredential: [
+      ...certifications.map((item) => ({
+        "@type": "EducationalOccupationalCredential",
+        name: `${item.name} (${item.year})`,
+        credentialCategory: "certification",
+        recognizedBy: { "@type": "Organization", name: item.place },
+      })),
+      ...education.map((item, index) => ({
+        "@type": "EducationalOccupationalCredential",
+        name: t.education[index].degree,
+        credentialCategory: "degree",
+        recognizedBy: { "@type": "Organization", name: t.education[index].place },
+      })),
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: mit.name,
+        credentialCategory: "executive education",
+        description: t.mit.place,
+      },
+    ],
+    knowsAbout: t.seo.knowsAbout,
+    sameAs: [site.instagram, site.linkedin, site.sintetiza, `${site.url}/`],
+  };
+
   const website = {
     "@type": "WebSite",
     "@id": websiteId,
     name: `${site.name} — ${site.brand}`,
     url: site.url,
-    inLanguage: "pt-BR",
-    description: site.signature,
+    inLanguage: language,
+    description: t.signature,
     publisher: { "@id": personId },
   };
 
@@ -135,44 +125,44 @@ export function graphFor(page: string) {
     nodes.push({
       "@type": "ProfilePage",
       "@id": `${site.url}/#profile`,
-      url: `${site.url}/`,
+      url: `${site.url}${homePath}`,
       name: site.name,
-      inLanguage: "pt-BR",
+      inLanguage: language,
       mainEntity: { "@id": personId },
       primaryImageOfPage: `${site.url}/fotos/olsen-retrato.jpg`,
     });
-    nodes.push(faqNode(faqHome));
+    nodes.push(faqNode(t.faq.home));
   }
 
   if (page === "trajetoria") {
     nodes.push(breadcrumb([
-      { name: "Início", path: "/" },
-      { name: "Trajetória", path: "/trajetoria/" },
+      { name: t.seo.breadcrumbHome, path: homePath },
+      { name: t.nav.trajetoria, path: localePath(lang, "/trajetoria/") },
     ]));
     nodes.push({
       "@type": "ItemList",
-      name: "Trajetória profissional de Olsen Rodrigo",
+      name: t.seo.timelineName,
       itemListElement: timeline.map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        name: `${item.period} ${item.org}`,
-        description: `${item.role}. ${item.text}`,
+        name: `${t.timeline[index].period} ${item.org}`,
+        description: `${t.timeline[index].role}. ${t.timeline[index].text}`,
       })),
     });
     nodes.push({
       "@type": "ItemList",
-      name: "Textos de Olsen Rodrigo na editoria de Tecnologia do Portal Zumm",
+      name: t.seo.articlesName,
       itemListElement: zummArticles.map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
         item: {
           "@type": "Article",
-          headline: item.title,
+          headline: t.articles[index].title,
           datePublished: item.published,
           inLanguage: "pt-BR",
           url: item.href,
           author: { "@id": personId },
-          description: item.excerpt,
+          description: t.articles[index].excerpt,
         },
       })),
     });
@@ -180,46 +170,46 @@ export function graphFor(page: string) {
 
   if (page === "formacao") {
     nodes.push(breadcrumb([
-      { name: "Início", path: "/" },
-      { name: "Formação", path: "/formacao/" },
+      { name: t.seo.breadcrumbHome, path: homePath },
+      { name: t.nav.formacao, path: localePath(lang, "/formacao/") },
     ]));
-    nodes.push(faqNode(faqFormacao));
+    nodes.push(faqNode(t.faq.formacao));
   }
 
   if (page === "mentoria") {
     nodes.push(breadcrumb([
-      { name: "Início", path: "/" },
-      { name: "Mentoria", path: "/mentoria/" },
+      { name: t.seo.breadcrumbHome, path: homePath },
+      { name: t.nav.mentoria, path: localePath(lang, "/mentoria/") },
     ]));
-    nodes.push(faqNode(faqMentoria));
+    nodes.push(faqNode(t.faq.mentoria));
     nodes.push(serviceNode(
-      "Mentoria com Olsen Rodrigo",
-      "Mentoria para fundadores e lideranças que precisam decidir como usar inteligência artificial com responsabilidade.",
-      "/mentoria/",
+      t.seo.mentoriaService,
+      t.seo.mentoriaServiceText,
+      localePath(lang, "/mentoria/"),
     ));
   }
 
   if (page === "consultoria") {
     nodes.push(breadcrumb([
-      { name: "Início", path: "/" },
-      { name: "Consultoria", path: "/consultoria/" },
+      { name: t.seo.breadcrumbHome, path: homePath },
+      { name: t.nav.consultoria, path: localePath(lang, "/consultoria/") },
     ]));
-    nodes.push(faqNode(faqConsultoria));
+    nodes.push(faqNode(t.faq.consultoria));
     nodes.push(serviceNode(
-      "Consultoria com Olsen Rodrigo",
-      "Consultoria para empresas que precisam da decisão de inteligência artificial antes de construir a solução.",
-      "/consultoria/",
+      t.seo.consultoriaService,
+      t.seo.consultoriaServiceText,
+      localePath(lang, "/consultoria/"),
     ));
   }
 
   if (page === "contato") {
     nodes.push(breadcrumb([
-      { name: "Início", path: "/" },
-      { name: "Contato", path: "/contato/" },
+      { name: t.seo.breadcrumbHome, path: homePath },
+      { name: t.nav.contato, path: localePath(lang, "/contato/") },
     ]));
     nodes.push({
       "@type": "ContactPage",
-      url: `${site.url}/contato/`,
+      url: `${site.url}${localePath(lang, "/contato/")}`,
       mainEntity: { "@id": personId },
     });
   }
@@ -227,6 +217,6 @@ export function graphFor(page: string) {
   return { "@context": "https://schema.org", "@graph": nodes };
 }
 
-export function jsonLd(page: string) {
-  return JSON.stringify(graphFor(page)).replace(/</g, "\\u003c");
+export function jsonLd(page: string, lang: Lang = "pt") {
+  return JSON.stringify(graphFor(page, lang)).replace(/</g, "\\u003c");
 }

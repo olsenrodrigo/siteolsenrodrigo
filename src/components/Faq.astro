@@ -1,22 +1,27 @@
 ---
-import type { Faq } from "../data/profile";
-
-interface Props {
-  items: Faq[];
-  title?: string;
+interface Item {
+  q: string;
+  a: string;
 }
 
-const { items, title = "Perguntas que o site responde" } = Astro.props;
+interface Props {
+  items: Item[];
+  title: string;
+  titleKey: string;
+  prefix: string;
+}
+
+const { items, title, titleKey, prefix } = Astro.props;
 ---
 
 <section class="band" aria-labelledby="faq-titulo">
   <div class="wrap">
-    <h2 id="faq-titulo">{title}</h2>
+    <h2 id="faq-titulo" data-i18n={titleKey}>{title}</h2>
     <div class="qa">
-      {items.map((item) => (
+      {items.map((item, index) => (
         <article>
-          <h3>{item.question}</h3>
-          <p>{item.answer}</p>
+          <h3 data-i18n={`${prefix}.${index}.q`}>{item.q}</h3>
+          <p data-i18n={`${prefix}.${index}.a`}>{item.a}</p>
         </article>
       ))}
     </div>

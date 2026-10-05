@@ -2,12 +2,13 @@
 interface Props {
   name: string;
   alt: string;
+  altKey?: string;
   width: number;
   height: number;
   priority?: boolean;
 }
 
-const { name, alt, width, height, priority = false } = Astro.props;
+const { name, alt, altKey, width, height, priority = false } = Astro.props;
 ---
 
 <picture>
@@ -15,6 +16,7 @@ const { name, alt, width, height, priority = false } = Astro.props;
   <img
     src={`/fotos/${name}.jpg`}
     alt={alt}
+    data-i18n-alt={altKey}
     width={width}
     height={height}
     loading={priority ? "eager" : "lazy"}

@@ -1,11 +1,15 @@
 ---
-import { nav } from "../data/profile";
+import { navItems } from "../data/profile";
+import { copy, localePath, type Lang } from "../i18n";
+import LangSwitcher from "./LangSwitcher.astro";
 
 interface Props {
+  lang: Lang;
   path: string;
 }
 
-const { path } = Astro.props;
+const { lang, path } = Astro.props;
+const t = copy(lang);
 
 function current(href: string) {
   const bare = href.replace(/\/$/, "") || "/";
@@ -16,20 +20,28 @@ function current(href: string) {
 
 <header class="mast">
   <div class="mast-inner">
-    <a class="brand" href="/" aria-label="EAIOLSEN, página inicial">
+    <a class="brand" href={localePath(lang, "/")} data-locale-href="/" aria-label={t.chrome.homeAria} data-i18n-aria="chrome.homeAria">
       <img src="/marca/eaiolsen.png" width="136" height="30" alt="EAIOLSEN" />
     </a>
-    <nav aria-label="Seções">
-      <ul class="nav-links">
-        {nav.map((item) => (
-          <li>
-            <a href={item.href} aria-current={current(item.href) ? "page" : undefined}>
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div class="mast-end">
+      <nav aria-label={t.chrome.sections} data-i18n-aria="chrome.sections">
+        <ul class="nav-links">
+          {navItems.map((item) => (
+            <li>
+              <a
+                href={localePath(lang, item.href)}
+                data-locale-href={item.href}
+                data-i18n={`nav.${item.key}`}
+                aria-current={current(item.href) ? "page" : undefined}
+              >
+                {t.nav[item.key]}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <LangSwitcher lang={lang} />
+    </div>
   </div>
   <div class="rule" aria-hidden="true"></div>
 </header>

@@ -2,7 +2,11 @@
 
 > Olsen Rodrigo Mott Silva, conhecido como Olsen Rodrigo e EAIOLSEN, é CEO e fundador da Sintetiza AI. Mentoria e consultoria para lideranças e empresas que precisam decidir como usar inteligência artificial com responsabilidade. Ribeirão Preto, São Paulo, Brasil.
 
-Páginas canônicas (o mesmo conteúdo também responderá em olsenrodrigo.com.br quando o domínio for ligado):
+Páginas canônicas (o mesmo conteúdo também responderá em olsenrodrigo.com.br quando o domínio for ligado). O site também está em inglês, espanhol e mandarim. Nomes próprios ficam na grafia original. A troca pelo seletor de bandeiras é imediata, e cada idioma tem endereço próprio:
+
+- English: https://olsenrodrigo.com/en/ — fatos em https://olsenrodrigo.com/llms-en.txt
+- Español: https://olsenrodrigo.com/es/ — fatos em https://olsenrodrigo.com/llms-es.txt
+- 中文: https://olsenrodrigo.com/zh/ — fatos em https://olsenrodrigo.com/llms-zh.txt
 
 - [Início](https://olsenrodrigo.com/): quem é, o que oferece, provas de carreira
 - [Trajetória](https://olsenrodrigo.com/trajetoria/): de 2004 à Sintetiza AI
