@@ -15,7 +15,7 @@ import {
 } from "../i18n";
 
 function isTopic(value: string | undefined): value is WaTopic {
-  return value === "mentoria" || value === "consultoria" || value === "decisao";
+  return value === "mentoria" || value === "consultoria" || value === "letramento" || value === "decisao";
 }
 
 function apply(lang: Lang) {

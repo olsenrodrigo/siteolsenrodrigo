@@ -47,7 +47,7 @@ const json = jsonLd(page, lang);
           var path = location.pathname;
           if (path.indexOf("/404") !== -1) return;
           if (/^\/(en|es|zh)(\/|$)/.test(path)) return;
-          var known = path === "/" || /^\/(trajetoria|formacao|mentoria|consultoria|contato)\/?$/.test(path);
+          var known = path === "/" || /^\/(trajetoria|formacao|letramento|mentoria|consultoria|contato)\/?$/.test(path);
           if (!known) return;
           var stored = localStorage.getItem("eaiolsen-lang");
           if (stored !== "en" && stored !== "es" && stored !== "zh") return;

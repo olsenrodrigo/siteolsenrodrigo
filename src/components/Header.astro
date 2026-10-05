@@ -2,6 +2,7 @@
 import { navItems } from "../data/profile";
 import { copy, localePath, type Lang } from "../i18n";
 import LangSwitcher from "./LangSwitcher.astro";
+import Social from "./Social.astro";
 
 interface Props {
   lang: Lang;
@@ -40,7 +41,10 @@ function current(href: string) {
           ))}
         </ul>
       </nav>
-      <LangSwitcher lang={lang} />
+      <div class="mast-tools">
+        <Social lang={lang} />
+        <LangSwitcher lang={lang} />
+      </div>
     </div>
   </div>
   <div class="rule" aria-hidden="true"></div>

@@ -106,7 +106,7 @@ export function graphFor(page: string, lang: Lang = "pt") {
       },
     ],
     knowsAbout: t.seo.knowsAbout,
-    sameAs: [site.instagram, site.linkedin, site.sintetiza, `${site.url}/`],
+    sameAs: [site.instagram, site.instagramCompany, site.linkedin, site.sintetiza, `${site.url}/`],
   };
 
   const website = {
@@ -199,6 +199,19 @@ export function graphFor(page: string, lang: Lang = "pt") {
       t.seo.consultoriaService,
       t.seo.consultoriaServiceText,
       localePath(lang, "/consultoria/"),
+    ));
+  }
+
+  if (page === "letramento") {
+    nodes.push(breadcrumb([
+      { name: t.seo.breadcrumbHome, path: homePath },
+      { name: t.nav.letramento, path: localePath(lang, "/letramento/") },
+    ]));
+    nodes.push(faqNode(t.faq.letramento));
+    nodes.push(serviceNode(
+      t.seo.letramentoService,
+      t.seo.letramentoServiceText,
+      localePath(lang, "/letramento/"),
     ));
   }
 

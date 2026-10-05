@@ -47,6 +47,7 @@ export interface Copy {
     formacao: MetaCopy;
     mentoria: MetaCopy;
     consultoria: MetaCopy;
+    letramento: MetaCopy;
     contato: MetaCopy;
     missing: MetaCopy;
   };
@@ -55,6 +56,8 @@ export interface Copy {
     homeAria: string;
     sections: string;
     langButton: string;
+    socialNav: string;
+    social: { ig: string; igCompany: string; in: string; mail: string };
     country: string;
     ogAlt: string;
     langs: { pt: string; en: string; es: string; zh: string };
@@ -64,12 +67,13 @@ export interface Copy {
     formacao: string;
     mentoria: string;
     consultoria: string;
+    letramento: string;
     contato: string;
   };
   slogan: string;
   signature: string;
-  cta: { mentoria: string; consultoria: string; whatsapp: string };
-  wa: { template: string; mentoria: string; consultoria: string; decisao: string };
+  cta: { mentoria: string; consultoria: string; letramento: string; whatsapp: string };
+  wa: { template: string; mentoria: string; consultoria: string; letramento: string; decisao: string };
   home: {
     dek: string;
     ctaHow: string;
@@ -96,7 +100,23 @@ export interface Copy {
     pathConsultoriaTitle: string;
     pathConsultoriaText: string;
     pathConsultoriaLink: string;
+    pathLetramentoTitle: string;
+    pathLetramentoText: string;
+    pathLetramentoLink: string;
     closing: string;
+  };
+  letramento: {
+    title: string;
+    intro: string;
+    lead: string;
+    muted: string;
+    forPeopleTitle: string;
+    forPeople: string;
+    forCompanyTitle: string;
+    forCompany: string;
+    endTitle: string;
+    end: string;
+    aside: string;
   };
   trajetoria: {
     title: string;
@@ -165,6 +185,7 @@ export interface Copy {
     title: string;
     intro: string;
     email: string;
+    instagramCompany: string;
     company: string;
     where: string;
   };
@@ -176,13 +197,14 @@ export interface Copy {
     home: [Qa, Qa, Qa, Qa];
     mentoria: [Qa, Qa, Qa, Qa];
     consultoria: [Qa, Qa, Qa];
+    letramento: [Qa, Qa, Qa, Qa];
     formacao: [Qa, Qa];
   };
   seo: {
     jobTitle: string;
     personDescription: string;
     nationality: string;
-    knowsAbout: [string, string, string, string, string, string, string, string];
+    knowsAbout: [string, string, string, string, string, string, string, string, string];
     breadcrumbHome: string;
     timelineName: string;
     articlesName: string;
@@ -190,5 +212,7 @@ export interface Copy {
     mentoriaServiceText: string;
     consultoriaService: string;
     consultoriaServiceText: string;
+    letramentoService: string;
+    letramentoServiceText: string;
   };
 }

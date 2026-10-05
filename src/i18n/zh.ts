@@ -3,9 +3,9 @@ import type { Copy } from "./types";
 export const zh: Copy = {
   meta: {
     home: {
-      title: "Olsen Rodrigo | 人工智能导师辅导与咨询",
+      title: "Olsen Rodrigo | 导师辅导、素养与咨询",
       description:
-        "Olsen Rodrigo，PMP，Sintetiza AI 的 CEO。为需要用项目方法决定人工智能的领导者提供导师辅导，起点是医疗健康里的关键任务。",
+        "Olsen Rodrigo，PMP，Sintetiza AI 的 CEO。面向个人和企业的人工智能素养，用来做决定的导师辅导，以及建设之前的咨询。",
     },
     trajetoria: {
       title: "Olsen Rodrigo 的经历 | EAIOLSEN",
@@ -27,10 +27,15 @@ export const zh: Copy = {
       description:
         "为企业在动手建设之前决定如何使用人工智能。判断来自 Olsen Rodrigo。执行在 Sintetiza AI 继续。",
     },
+    letramento: {
+      title: "与 Olsen Rodrigo 的人工智能素养 | EAIOLSEN",
+      description:
+        "面向个人和企业的人工智能素养。定制工作，4 小时或 8 小时，用实践练习处理运营中或日常里的问题。",
+    },
     contato: {
       title: "联系 Olsen Rodrigo | EAIOLSEN",
       description:
-        "与 Olsen Rodrigo 谈导师辅导或咨询。WhatsApp、电子邮件 olsen@sintetiza.ai、Instagram @olsenrodrigo 和 LinkedIn。Ribeirão Preto，São Paulo。",
+        "与 Olsen Rodrigo 谈素养、导师辅导或咨询。WhatsApp、olsen@olsenrodrigo.com、Instagram @olsenrodrigo 和 @sintetizaai、LinkedIn。Ribeirão Preto。",
     },
     missing: {
       title: "找不到页面 | Olsen Rodrigo",
@@ -42,6 +47,13 @@ export const zh: Copy = {
     homeAria: "EAIOLSEN，首页",
     sections: "栏目",
     langButton: "选择语言。当前语言：中文",
+    socialNav: "联系",
+    social: {
+      ig: "Olsen Rodrigo 的 Instagram，@olsenrodrigo",
+      igCompany: "Sintetiza AI 的 Instagram，@sintetizaai",
+      in: "Olsen Rodrigo 的 LinkedIn",
+      mail: "电子邮件 olsen@olsenrodrigo.com",
+    },
     country: "巴西",
     ogAlt: "Olsen Rodrigo，EAIOLSEN。少一点炒作。多一点智能。",
     langs: { pt: "Português", en: "English", es: "Español", zh: "中文" },
@@ -49,6 +61,7 @@ export const zh: Copy = {
   nav: {
     trajetoria: "经历",
     formacao: "教育",
+    letramento: "AI素养",
     mentoria: "导师辅导",
     consultoria: "咨询",
     contato: "联系",
@@ -58,16 +71,18 @@ export const zh: Copy = {
   cta: {
     mentoria: "约一次导师辅导谈话",
     consultoria: "约一次咨询谈话",
+    letramento: "约一次素养谈话",
     whatsapp: "用 WhatsApp 联系",
   },
   wa: {
     template: "您好，Olsen。我从网站来，想谈谈{topic}。",
     mentoria: "导师辅导",
     consultoria: "咨询",
+    letramento: "人工智能素养",
     decisao: "一项决策",
   },
   home: {
-    dek: "认证项目管理人。Sintetiza AI 的 CEO。在出错代价很高的地方工作超过 18 年。导师辅导给的是那些必须先做决定、再谈自动化的人，用的是关键任务里的同一套方法。",
+    dek: "认证项目管理人。Sintetiza AI 的 CEO。在出错代价很高的地方工作超过 18 年。导师辅导给必须先做决定、再谈自动化的人。人工智能素养给需要真正用起来的人：四小时或八小时，对准真实问题。",
     ctaHow: "导师辅导如何进行",
     proofsLabel: "职业生涯的标记",
     proofs: [
@@ -115,7 +130,11 @@ export const zh: Copy = {
     pathConsultoriaText:
       "给必须先决定、再建设的企业。判断在 Olsen 这边。执行如果该发生，就在 Sintetiza AI 继续。",
     pathConsultoriaLink: "看咨询",
-    closing: "第一条消息可以很短：写上还没有定下来的那项决定。",
+    pathLetramentoTitle: "人工智能素养",
+    pathLetramentoText:
+      "面向需要在工作中使用人工智能的个人和企业。四小时或八小时，定制进行，练习对准运营或日常里的问题。结束时，参加者能够使用它，并能支持自己的任务。",
+    pathLetramentoLink: "看这项素养工作",
+    closing: "第一条消息可以很短：写上还没有定下来的决定，或日常里的那个问题。",
   },
   trajetoria: {
     title: "经历",
@@ -257,7 +276,8 @@ export const zh: Copy = {
       "Olsen 自 2016 年起持有 PMP。他带来在 Matrix 的十二年，那些每月处理 7000 万项检验的系统，以及在 AmorSaúde Brasil 担任 CPO 与 CTO 的阶段，影响到的生命超过 2500 万。导师辅导把这把尺子用到房间里这个人的问题上，企业在医疗健康还是在别的行业，都一样。",
     whatTitle: "会发生什么",
     what1: "先有一次谈话，看这项决定是否适合这种形式。如果适合，双方约定会面，并且各自准备。没有班级，不强制录音，也没有课程路径。",
-    what2: "想上课的人有另一个地址：他在 Ipatinga 的 Escola Prudem 讲授的、应用于商业的人工智能课程。",
+    what2:
+      "想上课的人有两个不同的地址。人工智能素养是定制工作，四小时或八小时，练习对准这个人或这家企业的问题。Escola Prudem 里应用于商业的人工智能，是学校的课程，在 Ipatinga。",
   },
   consultoria: {
     title: "咨询",
@@ -274,10 +294,30 @@ export const zh: Copy = {
     withAfter:
       "是他创办的公司，用来建设和运营解决方案：助手、系统和集成，范围和工时都写清楚。很多工作从和他的谈话开始，再交给团队。",
   },
+  letramento: {
+    title: "人工智能素养",
+    intro: "面向个人，也面向企业。这是一项定制工作，四小时或八小时，用实践练习处理运营中或日常里的具体问题。",
+    lead:
+      "这不是一场讲人工智能能承诺什么的演讲。起点是已经存在的任务：反复出现的报告、客户接待、分析，以及吃掉一周的那个决定。",
+    muted:
+      "时长跟着问题走，不跟着货架上的套餐走。一个下午放得下，就是四小时。流程需要不止一个练习，就是八小时。无论哪一种，材料都是房间里这些人正在做的工作。",
+    forPeopleTitle: "给个人",
+    forPeople:
+      "需要在自己的工作里使用人工智能，而又不必变成工具专家的人。练习从他的任务出发：写作、分析、接待、准备一项决定。判断来自实践，不来自一场通用演示。",
+    forCompanyTitle: "给企业",
+    forCompany:
+      "一个团队需要同一种手艺，用在这家公司真实的流程上。问题进到房间里：运营在哪里耗时间，答复在哪里重复，决定是不是还靠人把信息从一个地方抄到另一个地方。",
+    endTitle: "结束时带走什么",
+    end:
+      "实践。参加者能够在自己的日常工作里使用人工智能，并能支持手头的任务和挑战。得到的是对自己问题的判断，不是从一场演示里抄来的捷径。",
+    aside:
+      "它不代替导师辅导。导师辅导是给已经在带队的人的决策谈话。它也不是 Escola Prudem 的课程，那是学校里的课。它也不包括把系统做出来。当真要建造时，工作转到咨询，并由 Sintetiza AI 执行。",
+  },
   contato: {
     title: "联系",
-    intro: "写下还没有定下来的那项决定。第一句话就够了。形式和投入从这次谈话里出来。",
+    intro: "写下还没有定下来的决定，或素养工作要处理的那个日常问题。第一句话就够了。形式和投入从这次谈话里出来。",
     email: "电子邮件",
+    instagramCompany: "Sintetiza 的 Instagram",
     company: "公司",
     where: "地点",
   },
@@ -305,7 +345,7 @@ export const zh: Copy = {
       },
       {
         q: "Olsen 在这个网站上提供什么？",
-        a: "给正在带队、又需要用项目方法做决定的人提供导师辅导。给必须在建设之前获得这种判断的企业提供咨询。建设如果该发生，发生在 Sintetiza AI。",
+        a: "人工智能素养，四小时或八小时，给需要在真实问题上使用工具的个人和企业。导师辅导给正在带队、又需要用项目方法做决定的人。咨询给必须在建设之前获得这种判断的企业。建设如果该发生，发生在 Sintetiza AI。",
       },
     ],
     mentoria: [
@@ -315,7 +355,7 @@ export const zh: Copy = {
       },
       {
         q: "导师辅导是课程吗？",
-        a: "没有班级，没有平台，也没有讲义。这是深入的谈话，日程在第一次谈话里约定。想上课的人可以去 Escola Prudem，Olsen 在那里讲授应用于商业的人工智能。",
+        a: "不是。没有班级，没有平台，也没有讲义。这是深入的谈话，日程在第一次谈话里约定。想要短而定制的实践，去看人工智能素养。想上学校的课，去 Ipatinga 的 Escola Prudem。",
       },
       {
         q: "一个人从导师辅导里带走什么？",
@@ -340,6 +380,24 @@ export const zh: Copy = {
         a: "本站没有价目表。第一次谈话用来理解还没有定下来的那项决定。形式、期限和投入从那个情境里出来，并写成文字。",
       },
     ],
+    letramento: [
+      {
+        q: "素养工作给谁？",
+        a: "给需要在真实工作里使用人工智能的个人和企业。练习处理的是运营中或日常里的一个问题。不是通用案例，也不是一场市场概览演讲。",
+      },
+      {
+        q: "要多长时间？",
+        a: "四小时或八小时。选哪一种，取决于进到房间里的那个问题。本站没有价目表。形式和投入从第一次谈话里出来。",
+      },
+      {
+        q: "结束时有什么变化？",
+        a: "参加者能够在日常工作里使用人工智能，并能支持自己工作中的任务和挑战。结果是在自己的问题上实践，并且带着判断。",
+      },
+      {
+        q: "这是导师辅导，还是 Prudem 的课程？",
+        a: "都不是。导师辅导是谈话，没有班级，也没有课。Escola Prudem 是他在 Ipatinga 讲授的课程。素养是另一项工作：定制、短、重实践。把系统做出来，如果该发生，那是咨询；到了执行，是 Sintetiza AI。",
+      },
+    ],
     formacao: [
       {
         q: "Olsen 是否持有 MIT 的学位？",
@@ -354,7 +412,7 @@ export const zh: Copy = {
   seo: {
     jobTitle: "Sintetiza AI 的 CEO 与创始人",
     personDescription:
-      "持有 PMP 的项目管理人。在应用于商业的技术里工作超过 18 年，重点在医疗健康。用项目方法决定如何使用人工智能的导师辅导与咨询。Ribeirão Preto。",
+      "持有 PMP 的项目管理人。在应用于商业的技术里工作超过 18 年，重点在医疗健康。人工智能素养、导师辅导与咨询。Ribeirão Preto。",
     nationality: "巴西",
     knowsAbout: [
       "应用于商业的人工智能",
@@ -365,6 +423,7 @@ export const zh: Copy = {
       "产品管理",
       "技术领导力",
       "人工智能治理",
+      "人工智能素养",
     ],
     breadcrumbHome: "首页",
     timelineName: "Olsen Rodrigo 的职业经历",
@@ -373,5 +432,7 @@ export const zh: Copy = {
     mentoriaServiceText: "为需要负责任地决定如何使用人工智能的创始人和领导者提供的导师辅导。",
     consultoriaService: "与 Olsen Rodrigo 的咨询",
     consultoriaServiceText: "为企业在建设解决方案之前做出人工智能决定而提供的咨询。",
+    letramentoService: "与 Olsen Rodrigo 的人工智能素养",
+    letramentoServiceText: "面向个人和企业的定制工作，四小时或八小时，用来在运营或日常的问题上使用人工智能。",
   },
 };

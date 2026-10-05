@@ -3,9 +3,9 @@ import type { Copy } from "./types";
 export const es: Copy = {
   meta: {
     home: {
-      title: "Olsen Rodrigo | Mentoría y consultoría en IA",
+      title: "Olsen Rodrigo | Mentoría, alfabetización y consultoría en IA",
       description:
-        "Olsen Rodrigo, PMP y CEO de Sintetiza AI. Mentoría para líderes que necesitan decidir la inteligencia artificial con método de proyecto, desde la misión crítica en salud.",
+        "Olsen Rodrigo, PMP y CEO de Sintetiza AI. Alfabetización en IA para personas y empresas, mentoría para decidir y consultoría antes de construir.",
     },
     trajetoria: {
       title: "Trayectoria de Olsen Rodrigo | EAIOLSEN",
@@ -27,10 +27,15 @@ export const es: Copy = {
       description:
         "Consultoría para empresas que necesitan decidir el uso de la inteligencia artificial antes de construir. El juicio es de Olsen Rodrigo. La ejecución sigue en Sintetiza AI.",
     },
+    letramento: {
+      title: "Alfabetización en IA con Olsen Rodrigo | EAIOLSEN",
+      description:
+        "Alfabetización en IA para personas y empresas. Trabajo personalizado, de 4 u 8 horas, con ejercicios prácticos sobre un problema de la operación o del día a día.",
+    },
     contato: {
       title: "Contacto de Olsen Rodrigo | EAIOLSEN",
       description:
-        "Hable con Olsen Rodrigo sobre mentoría o consultoría. WhatsApp, correo olsen@sintetiza.ai, Instagram @olsenrodrigo y LinkedIn. Ribeirão Preto, São Paulo.",
+        "Hable con Olsen Rodrigo sobre alfabetización, mentoría o consultoría. WhatsApp, olsen@olsenrodrigo.com, Instagram @olsenrodrigo y @sintetizaai, LinkedIn. Ribeirão Preto.",
     },
     missing: {
       title: "Página no encontrada | Olsen Rodrigo",
@@ -42,6 +47,13 @@ export const es: Copy = {
     homeAria: "EAIOLSEN, página de inicio",
     sections: "Secciones",
     langButton: "Elegir idioma. Idioma actual: español",
+    socialNav: "Contacto",
+    social: {
+      ig: "Instagram de Olsen Rodrigo, @olsenrodrigo",
+      igCompany: "Instagram de Sintetiza AI, @sintetizaai",
+      in: "LinkedIn de Olsen Rodrigo",
+      mail: "Correo olsen@olsenrodrigo.com",
+    },
     country: "Brasil",
     ogAlt: "Olsen Rodrigo, EAIOLSEN. Menos exageración. Más inteligencia.",
     langs: { pt: "Português", en: "English", es: "Español", zh: "中文" },
@@ -49,6 +61,7 @@ export const es: Copy = {
   nav: {
     trajetoria: "Trayectoria",
     formacao: "Formación",
+    letramento: "Alfabetización",
     mentoria: "Mentoría",
     consultoria: "Consultoría",
     contato: "Contacto",
@@ -58,16 +71,18 @@ export const es: Copy = {
   cta: {
     mentoria: "Pedir una conversación de mentoría",
     consultoria: "Pedir una conversación de consultoría",
+    letramento: "Pedir una conversación sobre alfabetización",
     whatsapp: "Escribir por WhatsApp",
   },
   wa: {
     template: "Hola, Olsen. Llegué por el sitio y quiero conversar sobre {topic}.",
     mentoria: "mentoría",
     consultoria: "consultoría",
+    letramento: "alfabetización en IA",
     decisao: "una decisión",
   },
   home: {
-    dek: "Gerente de proyectos certificado. CEO de Sintetiza AI. Más de 18 años en lugares donde el error sale caro. La mentoría existe para quien necesita decidir antes de automatizar, con el mismo método de la misión crítica.",
+    dek: "Gerente de proyectos certificado. CEO de Sintetiza AI. Más de 18 años en lugares donde el error sale caro. La mentoría existe para quien necesita decidir antes de automatizar. La alfabetización en IA existe para quien necesita usarla: cuatro u ocho horas, sobre el problema real.",
     ctaHow: "Cómo funciona la mentoría",
     proofsLabel: "Marcas de la carrera",
     proofs: [
@@ -120,7 +135,11 @@ export const es: Copy = {
     pathConsultoriaText:
       "Para la empresa que necesita decidir antes de construir. El juicio está con Olsen. La ejecución, cuando corresponde, sigue en Sintetiza AI.",
     pathConsultoriaLink: "Ver la consultoría",
-    closing: "El primer mensaje puede ser corto: la decisión que sigue abierta.",
+    pathLetramentoTitle: "Alfabetización en IA",
+    pathLetramentoText:
+      "Para personas y empresas que necesitan usar la inteligencia artificial en el trabajo. Cuatro u ocho horas, personalizado, con un ejercicio sobre el problema de la operación o del día a día. Al final, la persona sale en condiciones de usarla y de apoyar sus propias tareas.",
+    pathLetramentoLink: "Ver la alfabetización",
+    closing: "El primer mensaje puede ser corto: la decisión abierta, o el problema del día a día.",
   },
   trajetoria: {
     title: "Trayectoria",
@@ -276,7 +295,7 @@ export const es: Copy = {
     what1:
       "Una primera conversación para ver si la decisión cabe en este formato. Si cabe, encuentros acordados, con preparación de los dos lados. Sin grupo, sin grabación obligatoria, sin ruta de clases.",
     what2:
-      "Quien busca un curso tiene otra dirección: la materia de IA aplicada a los negocios que él da en Escola Prudem, en Ipatinga.",
+      "Quien busca clase tiene dos direcciones distintas. La alfabetización en IA es un trabajo personalizado, de cuatro u ocho horas, con un ejercicio sobre el problema de la persona o de la empresa. La materia de IA aplicada a los negocios, en Escola Prudem, es el curso de la escuela, en Ipatinga.",
   },
   consultoria: {
     title: "Consultoría",
@@ -293,11 +312,32 @@ export const es: Copy = {
     withAfter:
       " es la empresa que él fundó para construir y operar la solución: asistentes, sistemas e integraciones, con alcance y horas transparentes. Muchos trabajos nacen en la conversación con él y siguen con el equipo.",
   },
+  letramento: {
+    title: "Alfabetización en IA",
+    intro:
+      "Para personas y para empresas. Un trabajo personalizado, de cuatro u ocho horas, con ejercicios prácticos sobre un problema de la operación o del día a día.",
+    lead:
+      "No es una charla sobre lo que la inteligencia artificial promete. El punto de partida es la tarea que ya existe: el informe que se repite, la atención, el análisis, la decisión que se come la semana.",
+    muted:
+      "La duración sigue al problema, no a un paquete de estantería. Cuatro horas cuando el caso cabe en una tarde. Ocho horas cuando el proceso pide más de un ejercicio. En los dos casos, el material es el trabajo de quien está en la sala.",
+    forPeopleTitle: "Para la persona",
+    forPeople:
+      "Quien necesita usar la inteligencia artificial en su propio oficio, sin volverse especialista de herramienta. El ejercicio parte de su tarea: escribir, analizar, atender, preparar una decisión. El criterio sale de la práctica, no de una demostración genérica.",
+    forCompanyTitle: "Para la empresa",
+    forCompany:
+      "Un equipo que necesita el mismo oficio, aplicado al proceso real de la casa. El problema entra en la sala: dónde la operación pierde tiempo, dónde la respuesta se repite, dónde la decisión todavía depende de que alguien copie información de un lugar a otro.",
+    endTitle: "Qué se lleva al final",
+    end:
+      "Práctica. La persona sale en condiciones de usar la inteligencia artificial en el día a día y de apoyar las tareas y los desafíos de su propio trabajo. El resultado es criterio sobre su problema, no un atajo copiado de una presentación.",
+    aside:
+      "No reemplaza la mentoría, que es una conversación de decisión para quien ya lidera. No es la disciplina de la Escola Prudem, que es el curso de la escuela. Y no incluye construir el sistema. Cuando ese es el trabajo, sigue en la consultoría y en Sintetiza AI.",
+  },
   contato: {
     title: "Contacto",
     intro:
-      "Escriba la decisión que sigue abierta. Una frase basta para el primer mensaje. El formato y la inversión salen de esa conversación.",
+      "Escriba la decisión abierta, o el problema del día a día que la alfabetización debe atacar. Una frase basta para el primer mensaje. El formato y la inversión salen de esa conversación.",
     email: "Correo",
+    instagramCompany: "Instagram de Sintetiza",
     company: "Empresa",
     where: "Dónde",
   },
@@ -325,7 +365,7 @@ export const es: Copy = {
       },
       {
         q: "¿Qué ofrece Olsen en este sitio?",
-        a: "Mentoría para quien lidera y necesita decidir con método de proyecto. Consultoría para la empresa que necesita ese juicio antes de construir. La construcción, cuando corresponde, ocurre en Sintetiza AI.",
+        a: "Alfabetización en IA, de cuatro u ocho horas, para personas y empresas que necesitan usar la herramienta en el problema real. Mentoría para quien lidera y necesita decidir con método de proyecto. Consultoría para la empresa que necesita ese juicio antes de construir. La construcción, cuando corresponde, ocurre en Sintetiza AI.",
       },
     ],
     mentoria: [
@@ -335,7 +375,7 @@ export const es: Copy = {
       },
       {
         q: "¿La mentoría es un curso?",
-        a: "No hay grupo, plataforma ni cuaderno. Son conversaciones en profundidad, con la agenda acordada en la primera conversación. Quien quiere clase encuentra Escola Prudem, donde Olsen da la materia de IA aplicada a los negocios.",
+        a: "No. No hay grupo, plataforma ni cuaderno. Son conversaciones en profundidad, con la agenda acordada en la primera conversación. Quien quiere práctica corta y personalizada encuentra la alfabetización en IA. Quien quiere la materia de la escuela encuentra Escola Prudem, en Ipatinga.",
       },
       {
         q: "¿Qué se lleva la persona de la mentoría?",
@@ -360,6 +400,24 @@ export const es: Copy = {
         a: "No hay tabla en este sitio. La primera conversación sirve para entender la decisión que sigue abierta. El formato, el plazo y la inversión salen de ese contexto, por escrito.",
       },
     ],
+    letramento: [
+      {
+        q: "¿Para quién es la alfabetización?",
+        a: "Para personas y empresas que necesitan usar la inteligencia artificial en el trabajo real. El ejercicio ataca un problema de la operación o del día a día. No es un caso genérico y no es una charla de panorama de mercado.",
+      },
+      {
+        q: "¿Cuánto dura?",
+        a: "Cuatro u ocho horas. La elección depende del problema que entra en la sala. No hay tabla de precios en este sitio. El formato y la inversión salen de la primera conversación.",
+      },
+      {
+        q: "¿Qué cambia al final?",
+        a: "La persona sale en condiciones de usar la inteligencia artificial en el día a día y de apoyar las tareas y los desafíos de su trabajo. El resultado es práctica sobre su problema, con criterio.",
+      },
+      {
+        q: "¿Esto es la mentoría o el curso de Prudem?",
+        a: "No. La mentoría es conversación, sin grupo y sin clase. La Escola Prudem es la disciplina que él da en Ipatinga. La alfabetización es un trabajo aparte: personalizado, corto y práctico. Construir el sistema, cuando corresponde, es consultoría y, en la ejecución, es Sintetiza AI.",
+      },
+    ],
     formacao: [
       {
         q: "¿Olsen es egresado del MIT?",
@@ -374,7 +432,7 @@ export const es: Copy = {
   seo: {
     jobTitle: "CEO y fundador de Sintetiza AI",
     personDescription:
-      "Gerente de proyectos certificado PMP. Más de 18 años en tecnología aplicada a los negocios, con foco en salud. Mentoría y consultoría para decidir el uso de la inteligencia artificial con método de proyecto. Ribeirão Preto.",
+      "Gerente de proyectos certificado PMP. Más de 18 años en tecnología aplicada a los negocios, con foco en salud. Alfabetización en IA, mentoría y consultoría. Ribeirão Preto.",
     nationality: "Brasil",
     knowsAbout: [
       "Inteligencia artificial aplicada a los negocios",
@@ -385,6 +443,7 @@ export const es: Copy = {
       "Gestión de producto",
       "Liderazgo de tecnología",
       "Gobernanza de inteligencia artificial",
+      "Alfabetización en inteligencia artificial",
     ],
     breadcrumbHome: "Inicio",
     timelineName: "Trayectoria profesional de Olsen Rodrigo",
@@ -395,5 +454,8 @@ export const es: Copy = {
     consultoriaService: "Consultoría con Olsen Rodrigo",
     consultoriaServiceText:
       "Consultoría para empresas que necesitan la decisión de inteligencia artificial antes de construir la solución.",
+    letramentoService: "Alfabetización en IA con Olsen Rodrigo",
+    letramentoServiceText:
+      "Trabajo personalizado, de cuatro u ocho horas, para que personas y empresas usen la inteligencia artificial en un problema de la operación o del día a día.",
   },
 };

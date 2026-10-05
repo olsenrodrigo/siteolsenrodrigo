@@ -1,0 +1,46 @@
+---
+import Base from "../layouts/Base.astro";
+import Faq from "../components/Faq.astro";
+import { copy, waHref, type Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = copy(lang);
+---
+
+<Base title={t.meta.letramento.title} description={t.meta.letramento.description} page="letramento" path="/letramento/" lang={lang}>
+  <header class="page-head">
+    <div class="wrap">
+      <h1 data-i18n="letramento.title">{t.letramento.title}</h1>
+      <p data-i18n="letramento.intro">{t.letramento.intro}</p>
+    </div>
+  </header>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="lead" data-i18n="letramento.lead">{t.letramento.lead}</p>
+      <p class="muted" data-i18n="letramento.muted">{t.letramento.muted}</p>
+      <div class="paths letramento-split">
+        <article>
+          <h2 data-i18n="letramento.forPeopleTitle">{t.letramento.forPeopleTitle}</h2>
+          <p data-i18n="letramento.forPeople">{t.letramento.forPeople}</p>
+        </article>
+        <article>
+          <h2 data-i18n="letramento.forCompanyTitle">{t.letramento.forCompanyTitle}</h2>
+          <p data-i18n="letramento.forCompany">{t.letramento.forCompany}</p>
+        </article>
+      </div>
+      <h2 data-i18n="letramento.endTitle">{t.letramento.endTitle}</h2>
+      <p data-i18n="letramento.end">{t.letramento.end}</p>
+      <p class="muted" data-i18n="letramento.aside">{t.letramento.aside}</p>
+      <p>
+        <a class="ink-link" href={waHref(lang, "letramento")} data-wa="letramento" data-i18n="cta.letramento">{t.cta.letramento}</a>
+      </p>
+    </div>
+  </section>
+
+  <Faq items={t.faq.letramento} title={t.faq.before} titleKey="faq.before" prefix="faq.letramento" />
+</Base>

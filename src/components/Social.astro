@@ -1,0 +1,54 @@
+---
+import { site } from "../data/profile";
+import { copy, type Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = copy(lang);
+
+const instagram = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm8 1.8H8A3.2 3.2 0 0 0 4.8 8v8A3.2 3.2 0 0 0 8 19.2h8a3.2 3.2 0 0 0 3.2-3.2V8A3.2 3.2 0 0 0 16 4.8zM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 1.7a2.3 2.3 0 1 0 0 4.6 2.3 2.3 0 0 0 0-4.6zM17.2 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>`;
+const linkedin = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.7 9H3.2V21h2.5V9zM4.45 3.2a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1zM21 21h-2.5v-6.2c0-1.85-.75-2.55-1.85-2.55-1.2 0-1.95.85-1.95 2.6V21H12V9h2.4v1.55c.45-.85 1.55-1.8 3.25-1.8 2.25 0 3.35 1.35 3.35 4.35V21z"/></svg>`;
+const mail = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.5 6.2A1.7 1.7 0 0 1 5.2 4.5h13.6a1.7 1.7 0 0 1 1.7 1.7v11.6a1.7 1.7 0 0 1-1.7 1.7H5.2a1.7 1.7 0 0 1-1.7-1.7V6.2zm1.8.4 6.7 4.7 6.7-4.7H5.3zm14.1 1.7-6.1 4.3a1.3 1.3 0 0 1-1.5 0L5.7 8.3v9.5h13.7V8.3z"/></svg>`;
+---
+
+<nav class="social" aria-label={t.chrome.socialNav} data-i18n-aria="chrome.socialNav">
+  <a
+    href={site.instagram}
+    data-handle="@olsenrodrigo"
+    aria-label={t.chrome.social.ig}
+    data-i18n-aria="chrome.social.ig"
+    rel="me"
+  >
+    <span set:html={instagram} />
+  </a>
+  <a
+    class="is-company"
+    href={site.instagramCompany}
+    data-handle="@sintetizaai"
+    aria-label={t.chrome.social.igCompany}
+    data-i18n-aria="chrome.social.igCompany"
+  >
+    <span set:html={instagram} />
+    <span class="social-name">Sintetiza</span>
+  </a>
+  <a
+    href={site.linkedin}
+    data-handle="LinkedIn"
+    aria-label={t.chrome.social.in}
+    data-i18n-aria="chrome.social.in"
+    rel="me"
+  >
+    <span set:html={linkedin} />
+  </a>
+  <a
+    href={`mailto:${site.email}`}
+    data-handle={site.email}
+    aria-label={t.chrome.social.mail}
+    data-i18n-aria="chrome.social.mail"
+  >
+    <span set:html={mail} />
+  </a>
+</nav>

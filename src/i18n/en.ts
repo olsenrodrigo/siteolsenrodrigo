@@ -3,9 +3,9 @@ import type { Copy } from "./types";
 export const en: Copy = {
   meta: {
     home: {
-      title: "Olsen Rodrigo | Mentorship and AI consulting",
+      title: "Olsen Rodrigo | Mentorship, AI literacy, and consulting",
       description:
-        "Olsen Rodrigo, PMP and CEO of Sintetiza AI. Mentorship for leaders who need to decide on artificial intelligence with a project method, from mission-critical healthcare.",
+        "Olsen Rodrigo, PMP and CEO of Sintetiza AI. AI literacy for people and companies, mentorship to decide, and consulting before building.",
     },
     trajetoria: {
       title: "Career of Olsen Rodrigo | EAIOLSEN",
@@ -27,10 +27,15 @@ export const en: Copy = {
       description:
         "Consulting for companies that need to decide how to use artificial intelligence before building. The judgment is Olsen Rodrigo's. Execution continues at Sintetiza AI.",
     },
+    letramento: {
+      title: "AI literacy with Olsen Rodrigo | EAIOLSEN",
+      description:
+        "AI literacy for people and companies. Personalized work, 4 or 8 hours, with practical exercises on an operating problem or a daily one.",
+    },
     contato: {
       title: "Contact Olsen Rodrigo | EAIOLSEN",
       description:
-        "Talk to Olsen Rodrigo about mentorship or consulting. WhatsApp, email olsen@sintetiza.ai, Instagram @olsenrodrigo, and LinkedIn. Ribeirão Preto, São Paulo.",
+        "Talk to Olsen Rodrigo about AI literacy, mentorship, or consulting. WhatsApp, olsen@olsenrodrigo.com, Instagram @olsenrodrigo and @sintetizaai, LinkedIn. Ribeirão Preto.",
     },
     missing: {
       title: "Page not found | Olsen Rodrigo",
@@ -42,6 +47,13 @@ export const en: Copy = {
     homeAria: "EAIOLSEN, home",
     sections: "Sections",
     langButton: "Choose language. Current language: English",
+    socialNav: "Contact",
+    social: {
+      ig: "Olsen Rodrigo on Instagram, @olsenrodrigo",
+      igCompany: "Sintetiza AI on Instagram, @sintetizaai",
+      in: "Olsen Rodrigo on LinkedIn",
+      mail: "Email olsen@olsenrodrigo.com",
+    },
     country: "Brazil",
     ogAlt: "Olsen Rodrigo, EAIOLSEN. Less hype. More intelligence.",
     langs: { pt: "Português", en: "English", es: "Español", zh: "中文" },
@@ -49,6 +61,7 @@ export const en: Copy = {
   nav: {
     trajetoria: "Career",
     formacao: "Education",
+    letramento: "AI literacy",
     mentoria: "Mentorship",
     consultoria: "Consulting",
     contato: "Contact",
@@ -58,16 +71,18 @@ export const en: Copy = {
   cta: {
     mentoria: "Ask for a mentorship conversation",
     consultoria: "Ask for a consulting conversation",
+    letramento: "Ask for a conversation about AI literacy",
     whatsapp: "Message on WhatsApp",
   },
   wa: {
     template: "Hello, Olsen. I came through the site and I want to talk about {topic}.",
     mentoria: "mentorship",
     consultoria: "consulting",
+    letramento: "AI literacy",
     decisao: "a decision",
   },
   home: {
-    dek: "Certified project manager. CEO of Sintetiza AI. More than 18 years in places where a mistake is expensive. Mentorship is for anyone who needs to decide before automating, with the same method used in mission-critical work.",
+    dek: "Certified project manager. CEO of Sintetiza AI. More than 18 years in places where a mistake is expensive. Mentorship is for anyone who needs to decide before automating. AI literacy is for anyone who needs to use it: four or eight hours, on the real problem.",
     ctaHow: "How mentorship works",
     proofsLabel: "Marks of the career",
     proofs: [
@@ -120,7 +135,11 @@ export const en: Copy = {
     pathConsultoriaText:
       "For the company that needs to decide before building. The judgment sits with Olsen. Execution, when it belongs, continues at Sintetiza AI.",
     pathConsultoriaLink: "See the consulting",
-    closing: "The first message can be short: the decision that is still open.",
+    pathLetramentoTitle: "AI literacy",
+    pathLetramentoText:
+      "For people and companies that need to use artificial intelligence at work. Four or eight hours, personalized, with an exercise on an operating problem or a daily one. By the end, the person can use it and support their own tasks.",
+    pathLetramentoLink: "See the literacy work",
+    closing: "The first message can be short: the open decision, or the problem in the day.",
   },
   trajetoria: {
     title: "Career",
@@ -276,7 +295,7 @@ export const en: Copy = {
     what1:
       "A first conversation to see whether the decision fits this format. If it does, meetings are agreed, with preparation on both sides. No cohort, no mandatory recording, no lesson track.",
     what2:
-      "Anyone looking for a course has another address: the applied-AI-for-business class he teaches at Escola Prudem, in Ipatinga.",
+      "Anyone looking for a class has two different addresses. AI literacy is personalized work, four or eight hours, with an exercise on the person's or the company's problem. The applied-AI-for-business class at Escola Prudem is the school's course, in Ipatinga.",
   },
   consultoria: {
     title: "Consulting",
@@ -293,11 +312,32 @@ export const en: Copy = {
     withAfter:
       " is the company he founded to build and operate the solution: assistants, systems, and integrations, with a clear scope and transparent hours. Many engagements start in a conversation with him and continue with the team.",
   },
+  letramento: {
+    title: "AI literacy",
+    intro:
+      "For people and for companies. Personalized work, four or eight hours, with practical exercises on an operating problem or a daily one.",
+    lead:
+      "This is not a talk about what artificial intelligence promises. It starts from a task that already exists: the report that repeats, the service conversation, the analysis, the decision that eats the week.",
+    muted:
+      "The length follows the problem, not a shelf package. Four hours when the case fits an afternoon. Eight hours when the process needs more than one exercise. In either case, the material is the work of the people in the room.",
+    forPeopleTitle: "For the person",
+    forPeople:
+      "Someone who needs to use artificial intelligence in their own craft, without becoming a tool specialist. The exercise starts from their task: writing, analyzing, serving a customer, preparing a decision. The standard comes from practice, not from a generic demo.",
+    forCompanyTitle: "For the company",
+    forCompany:
+      "A team that needs the same craft, applied to the real process of the house. The problem comes into the room: where the operation loses time, where the answer repeats, where a decision still depends on someone copying information from one place to another.",
+    endTitle: "What they leave with",
+    end:
+      "Practice. The person leaves able to use artificial intelligence in daily work and to support the tasks and challenges in front of them. The gain is judgment on their problem, not a shortcut copied from a presentation.",
+    aside:
+      "It does not replace mentorship, which is a decision conversation for people who already lead. It is not the Escola Prudem class, which is the school's course. And it does not include building the system. When that is the work, it continues as consulting and at Sintetiza AI.",
+  },
   contato: {
     title: "Contact",
     intro:
-      "Write the decision that is still open. One sentence is enough for the first message. Format and investment come out of that conversation.",
+      "Write the open decision, or the daily problem the literacy work should attack. One sentence is enough for the first message. Format and investment come out of that conversation.",
     email: "Email",
+    instagramCompany: "Sintetiza on Instagram",
     company: "Company",
     where: "Where",
   },
@@ -325,7 +365,7 @@ export const en: Copy = {
       },
       {
         q: "What does Olsen offer on this site?",
-        a: "Mentorship for the person who leads and needs to decide with a project method. Consulting for the company that needs that judgment before building. The build, when it belongs, happens at Sintetiza AI.",
+        a: "AI literacy, four or eight hours, for people and companies that need to use the tool on a real problem. Mentorship for the person who leads and needs to decide with a project method. Consulting for the company that needs that judgment before building. The build, when it belongs, happens at Sintetiza AI.",
       },
     ],
     mentoria: [
@@ -335,7 +375,7 @@ export const en: Copy = {
       },
       {
         q: "Is mentorship a course?",
-        a: "There is no cohort, no platform, and no handbook. These are in-depth conversations, with the schedule agreed in the first conversation. Anyone who wants a class will find Escola Prudem, where Olsen teaches the applied-AI-for-business course.",
+        a: "No. There is no cohort, no platform, and no handbook. These are in-depth conversations, with the schedule agreed in the first conversation. Anyone who wants short, personalized practice will find AI literacy. Anyone who wants the school's course will find Escola Prudem, in Ipatinga.",
       },
       {
         q: "What does the person take from mentorship?",
@@ -360,6 +400,24 @@ export const en: Copy = {
         a: "There is no price list on this site. The first conversation is there to understand the decision that is still open. Format, timeline, and investment come out of that context, in writing.",
       },
     ],
+    letramento: [
+      {
+        q: "Who is AI literacy for?",
+        a: "For people and companies that need to use artificial intelligence in real work. The exercise attacks an operating problem or a daily one. It is not a generic case and it is not a market-overview talk.",
+      },
+      {
+        q: "How long does it last?",
+        a: "Four or eight hours. The choice depends on the problem that comes into the room. There is no price list on this site. Format and investment come out of the first conversation.",
+      },
+      {
+        q: "What changes at the end?",
+        a: "The person leaves able to use artificial intelligence in daily work and to support the tasks and challenges of that work. The result is practice on their problem, with judgment.",
+      },
+      {
+        q: "Is this mentorship, or the Prudem course?",
+        a: "No. Mentorship is a conversation, with no cohort and no class. Escola Prudem is the course he teaches in Ipatinga. AI literacy is a separate piece of work: personalized, short, and practical. Building the system, when it belongs, is consulting and, in execution, Sintetiza AI.",
+      },
+    ],
     formacao: [
       {
         q: "Does Olsen hold a degree from MIT?",
@@ -374,7 +432,7 @@ export const en: Copy = {
   seo: {
     jobTitle: "CEO and founder of Sintetiza AI",
     personDescription:
-      "PMP-certified project manager. More than 18 years in technology applied to business, with a focus on healthcare. Mentorship and consulting to decide how to use artificial intelligence with a project method. Ribeirão Preto.",
+      "PMP-certified project manager. More than 18 years in technology applied to business, with a focus on healthcare. AI literacy, mentorship, and consulting. Ribeirão Preto.",
     nationality: "Brazil",
     knowsAbout: [
       "Artificial intelligence applied to business",
@@ -385,6 +443,7 @@ export const en: Copy = {
       "Product management",
       "Technology leadership",
       "Artificial intelligence governance",
+      "Artificial intelligence literacy",
     ],
     breadcrumbHome: "Home",
     timelineName: "Professional career of Olsen Rodrigo",
@@ -395,5 +454,8 @@ export const en: Copy = {
     consultoriaService: "Consulting with Olsen Rodrigo",
     consultoriaServiceText:
       "Consulting for companies that need the artificial-intelligence decision before the solution is built.",
+    letramentoService: "AI literacy with Olsen Rodrigo",
+    letramentoServiceText:
+      "Personalized work, four or eight hours, for people and companies to use artificial intelligence on an operating problem or a daily one.",
   },
 };

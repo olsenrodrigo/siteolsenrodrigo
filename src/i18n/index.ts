@@ -8,11 +8,11 @@ import { zh } from "./zh";
 export type { Copy };
 export type Lang = "pt" | "en" | "es" | "zh";
 export type Foreign = Exclude<Lang, "pt">;
-export type WaTopic = "mentoria" | "consultoria" | "decisao";
+export type WaTopic = "mentoria" | "consultoria" | "letramento" | "decisao";
 
 export const LANGS = ["pt", "en", "es", "zh"] as const;
 export const FOREIGN: Foreign[] = ["en", "es", "zh"];
-export const PAGES = ["trajetoria", "formacao", "mentoria", "consultoria", "contato"] as const;
+export const PAGES = ["trajetoria", "formacao", "letramento", "mentoria", "consultoria", "contato"] as const;
 export const STORAGE_KEY = "eaiolsen-lang";
 
 export const htmlLang: Record<Lang, string> = {
