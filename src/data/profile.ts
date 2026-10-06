@@ -87,14 +87,14 @@ export const certifications = [
   { name: "Oracle Cloud", place: "Oracle", year: "2022", logo: "/marcas/logo_oracle.png" },
   { name: "ITIL 4", place: "PeopleCert / Axelos", year: "2022", logo: "/marcas/logo_itil.png" },
   { name: "PM3", place: "Produto", year: "2022", logo: "/marcas/logo_pm3.png" },
-  { name: "AWS Cloud", place: "Amazon Web Services", year: "2025", logo: "/marcas/logo_aws.png" },
   {
     name: "AWS Certified AI Practitioner",
     place: "Amazon Web Services",
-    year: "",
+    year: "2023",
     logo: "/marcas/logo_aws_ai.png",
     badge: true,
   },
+  { name: "AWS Cloud", place: "Amazon Web Services", year: "2025", logo: "/marcas/logo_aws.png" },
 ] as const;
 
 export const mit = {

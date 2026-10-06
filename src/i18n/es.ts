@@ -425,7 +425,7 @@ export const es: Copy = {
       },
       {
         q: "¿Qué certificaciones profesionales tiene?",
-        a: "La que organiza el trabajo es el PMP, Project Management Professional, desde 2016. También tiene Oracle Cloud, ITIL 4 y PM3 en 2022, AWS Cloud en 2025 y AWS Certified AI Practitioner. Todo su trabajo, mentoría incluida, parte de un método de proyecto.",
+        a: "La que organiza el trabajo es el PMP, Project Management Professional, desde 2016. También tiene Oracle Cloud, ITIL 4 y PM3 en 2022, AWS Certified AI Practitioner en 2023 y AWS Cloud en 2025. Todo su trabajo, mentoría incluida, parte de un método de proyecto.",
       },
     ],
   },

@@ -21,7 +21,7 @@
 - 在应用于商业的技术里工作超过 18 年，职业生涯的中心在医疗健康。
 - Ribeirão Preto 的 USP 生物医学信息学学士（第3届，2005–2008）。
 - FGV/SP 医疗健康高管 MBA（2015）。Insper 的 CTO 高管研修（2023）。
-- 认证：PMP（2016）、Oracle Cloud（2022）、ITIL 4（2022）、PM3（2022）、AWS Cloud（2025）、AWS Certified AI Practitioner（Foundational）。不要编造 AWS Certified AI Practitioner 的年份。
+- 认证：PMP（2016）、Oracle Cloud（2022）、ITIL 4（2022）、PM3（2022）、AWS Certified AI Practitioner（Foundational，2023）、AWS Cloud（2025）。
 - 教育：USP Ribeirão Preto、FGV、Insper，以及 2026年10月入选 MIT CEO Summit，在 Boston、由 MIT Sloan 教授授课的沉浸式课程。不是 MIT 的学位、学术证书或校友身份。不要描述活动日程。
 - 核心认证：PMP（Project Management Professional），自 2016 年起。全部工作，包括导师辅导和咨询，遵循项目方法：诊断、范围、风险、负责人和“完成”的定义。这套本事诞生于医疗健康的关键任务，适用于任何行业。
 - 2009–2021：Matrix Saúde，产品与技术管理。Matrix 的系统每月处理 7000 万项检验。巴西约三分之一的检验医学从那里经过。不要把 2500 万生命记到这段时期。

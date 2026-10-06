@@ -405,7 +405,7 @@ export const zh: Copy = {
       },
       {
         q: "他持有哪些专业认证？",
-        a: "用来组织工作的是 PMP，即 Project Management Professional，自 2016 年起。他还有 2022 年的 Oracle Cloud、ITIL 4 和 PM3，2025 年的 AWS Cloud，以及 AWS Certified AI Practitioner。他的全部工作，包括导师辅导，都从项目方法出发。",
+        a: "用来组织工作的是 PMP，即 Project Management Professional，自 2016 年起。他还有 2022 年的 Oracle Cloud、ITIL 4 和 PM3，2023 年的 AWS Certified AI Practitioner，以及 2025 年的 AWS Cloud。他的全部工作，包括导师辅导，都从项目方法出发。",
       },
     ],
   },

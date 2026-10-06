@@ -425,7 +425,7 @@ export const en: Copy = {
       },
       {
         q: "Which professional certifications does he hold?",
-        a: "The one that organizes the work is the PMP, Project Management Professional, since 2016. He also holds Oracle Cloud, ITIL 4, and PM3 from 2022, AWS Cloud from 2025, and AWS Certified AI Practitioner. All of his work, mentorship included, starts from a project method.",
+        a: "The one that organizes the work is the PMP, Project Management Professional, since 2016. He also holds Oracle Cloud, ITIL 4, and PM3 from 2022, AWS Certified AI Practitioner from 2023, and AWS Cloud from 2025. All of his work, mentorship included, starts from a project method.",
       },
     ],
   },
