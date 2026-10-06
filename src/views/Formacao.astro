@@ -60,7 +60,7 @@ const t = copy(lang);
             <div class="when">{item.year}</div>
             <div>
               <h3 class="row-title">
-                <span class="chip"><img src={item.logo} alt="" /></span>
+                <span class:list={["chip", "badge" in item && item.badge && "chip-badge"]}><img src={item.logo} alt="" /></span>
                 {item.name}
               </h3>
               <p class="muted">{item.place}</p>

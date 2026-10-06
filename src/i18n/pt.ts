@@ -15,7 +15,7 @@ export const pt: Copy = {
     formacao: {
       title: "Formação e certificações de Olsen Rodrigo",
       description:
-        "Informática Biomédica na USP Ribeirão Preto, MBA na FGV, CTO no Insper, PMP, Oracle Cloud, ITIL 4, PM3, AWS Cloud e o MIT CEO Summit 2026.",
+        "Informática Biomédica na USP Ribeirão Preto, MBA na FGV, CTO no Insper, PMP, Oracle Cloud, ITIL 4, PM3, AWS Cloud, AWS Certified AI Practitioner e o MIT CEO Summit 2026.",
     },
     mentoria: {
       title: "Mentoria com Olsen Rodrigo | EAIOLSEN",
@@ -30,7 +30,7 @@ export const pt: Copy = {
     letramento: {
       title: "Letramento em IA com Olsen Rodrigo | EAIOLSEN",
       description:
-        "Letramento em IA para pessoas e empresas. Trabalho personalizado, de 4 ou 8 horas, com exercícios práticos no problema da operação ou do dia a dia.",
+        "Letramento em IA, consultoria pessoal de Olsen ou da Sintetiza AI. Quatro ou oito horas, com exercícios práticos no problema da operação ou do dia a dia.",
     },
     contato: {
       title: "Contato de Olsen Rodrigo | EAIOLSEN",
@@ -137,7 +137,7 @@ export const pt: Copy = {
     pathConsultoriaLink: "Ver a consultoria",
     pathLetramentoTitle: "Letramento em IA",
     pathLetramentoText:
-      "Para pessoas e empresas que precisam usar a inteligência artificial no trabalho. Quatro ou oito horas, personalizado, com exercício no problema da operação ou do dia a dia. Ao final, a pessoa sai apta a usar e a apoiar as próprias tarefas.",
+      "Consultoria pessoal, com Olsen ou com a Sintetiza AI, para pessoas e empresas que precisam usar a inteligência artificial no trabalho. Quatro ou oito horas, com exercício no problema da operação ou do dia a dia. Ao final, a pessoa sai apta a usar e a apoiar as próprias tarefas.",
     pathLetramentoLink: "Ver o letramento",
     closing: "A primeira mensagem pode ser curta: a decisão em aberto, ou o problema do dia a dia.",
   },
@@ -295,7 +295,7 @@ export const pt: Copy = {
     what1:
       "Uma primeira conversa para ver se a decisão cabe nesse formato. Se couber, encontros combinados, com preparo dos dois lados. Sem turma, sem gravação obrigatória, sem trilha de aulas.",
     what2:
-      "Quem procura aula tem dois endereços diferentes. O letramento em IA é um trabalho personalizado, de quatro ou oito horas, com exercício no problema da pessoa ou da empresa. A disciplina de IA aplicada a negócios, na Escola Prudem, é o curso da escola, em Ipatinga.",
+      "A mentoria não é aula. Quem precisa usar a inteligência artificial no problema real encontra o letramento: uma consultoria pessoal, com Olsen ou com a Sintetiza AI, de quatro ou oito horas.",
   },
   consultoria: {
     title: "Consultoria",
@@ -315,7 +315,7 @@ export const pt: Copy = {
   letramento: {
     title: "Letramento em IA",
     intro:
-      "Para pessoas e para empresas. Um trabalho personalizado, de quatro ou oito horas, com exercícios práticos no problema da operação ou do dia a dia.",
+      "Uma consultoria pessoal, com Olsen ou com a Sintetiza AI. Para pessoas e para empresas. Quatro ou oito horas, com exercícios práticos no problema da operação ou do dia a dia.",
     lead:
       "Não é uma palestra sobre o que a inteligência artificial promete. O ponto de partida é a tarefa que já existe: o relatório que se repete, o atendimento, a análise, a decisão que consome a semana.",
     muted:
@@ -330,7 +330,7 @@ export const pt: Copy = {
     end:
       "Prática. A pessoa sai apta a usar a inteligência artificial no dia a dia e a apoiar as tarefas e os desafios do próprio trabalho. O ganho é critério no problema dela, não um atalho copiado de uma apresentação.",
     aside:
-      "Não substitui a mentoria, que é conversa de decisão para quem já lidera. Não é a disciplina da Escola Prudem, que é o curso da escola. E não inclui construir o sistema: isso, quando cabe, segue na consultoria e na Sintetiza AI.",
+      "É consultoria, pessoal: com Olsen ou com a Sintetiza AI. Não substitui a mentoria, que é conversa de decisão para quem já lidera. O trabalho é curto e prático, no problema de quem está na sala.",
   },
   contato: {
     title: "Contato",
@@ -365,7 +365,7 @@ export const pt: Copy = {
       },
       {
         q: "O que Olsen oferece neste site?",
-        a: "Letramento em IA, de quatro ou oito horas, para pessoas e empresas que precisam usar a ferramenta no problema real. Mentoria para quem lidera e precisa decidir com método de projeto. Consultoria para a empresa que precisa desse julgamento antes de construir. A construção, quando cabe, acontece na Sintetiza AI.",
+        a: "Letramento em IA, uma consultoria pessoal de Olsen ou da Sintetiza AI, de quatro ou oito horas, para quem precisa usar a ferramenta no problema real. Mentoria para quem lidera e precisa decidir com método de projeto. Consultoria para a empresa que precisa desse julgamento antes de construir. A construção, quando cabe, acontece na Sintetiza AI.",
       },
     ],
     mentoria: [
@@ -375,7 +375,7 @@ export const pt: Copy = {
       },
       {
         q: "A mentoria é um curso?",
-        a: "Não. Não há turma, plataforma nem apostila. São conversas em profundidade, com a agenda combinada na primeira conversa. Quem quer prática curta e personalizada encontra o letramento em IA. Quem quer a disciplina da escola encontra a Escola Prudem, em Ipatinga.",
+        a: "Não. Não há turma, plataforma nem apostila. São conversas em profundidade, com a agenda combinada na primeira conversa. Quem precisa praticar o uso no problema do dia a dia encontra o letramento em IA, uma consultoria pessoal de Olsen ou da Sintetiza AI.",
       },
       {
         q: "O que a pessoa leva da mentoria?",
@@ -414,8 +414,8 @@ export const pt: Copy = {
         a: "A pessoa sai apta a usar a inteligência artificial no dia a dia e a apoiar tarefas e desafios do próprio trabalho. O resultado é prática no problema dela, com critério.",
       },
       {
-        q: "Isso é a mentoria ou o curso da Prudem?",
-        a: "Não. A mentoria é conversa, sem turma e sem aula. A Escola Prudem é a disciplina que ele dá em Ipatinga. O letramento é um trabalho à parte: personalizado, curto e prático. Construir o sistema, quando cabe, é consultoria e, na execução, é a Sintetiza AI.",
+        q: "Com quem é o letramento?",
+        a: "É uma consultoria pessoal de Olsen ou da Sintetiza AI. O exercício é no problema da pessoa ou da empresa. A mentoria é outra conversa: decisão para quem já lidera.",
       },
     ],
     formacao: [
@@ -425,7 +425,7 @@ export const pt: Copy = {
       },
       {
         q: "Quais certificações profissionais ele tem?",
-        a: "A que organiza o trabalho é o PMP, Project Management Professional, desde 2016. Também tem Oracle Cloud, ITIL 4 e PM3 em 2022, e AWS Cloud em 2025. Todo trabalho dele, mentoria inclusive, parte de método de projeto.",
+        a: "A que organiza o trabalho é o PMP, Project Management Professional, desde 2016. Também tem Oracle Cloud, ITIL 4 e PM3 em 2022, AWS Cloud em 2025 e AWS Certified AI Practitioner. Todo trabalho dele, mentoria inclusive, parte de método de projeto.",
       },
     ],
   },
@@ -456,6 +456,6 @@ export const pt: Copy = {
       "Consultoria para empresas que precisam da decisão de inteligência artificial antes de construir a solução.",
     letramentoService: "Letramento em IA com Olsen Rodrigo",
     letramentoServiceText:
-      "Trabalho personalizado, de quatro ou oito horas, para pessoas e empresas usarem inteligência artificial no problema da operação ou do dia a dia.",
+      "Consultoria pessoal de Olsen Rodrigo ou da Sintetiza AI, de quatro ou oito horas, para pessoas e empresas usarem inteligência artificial no problema da operação ou do dia a dia.",
   },
 };

@@ -15,7 +15,7 @@ export const zh: Copy = {
     formacao: {
       title: "Olsen Rodrigo 的教育与认证",
       description:
-        "USP Ribeirão Preto 生物医学信息学、FGV 的 MBA、Insper 的 CTO 研修、PMP、Oracle Cloud、ITIL 4、PM3、AWS Cloud，以及 MIT CEO Summit 2026。",
+        "USP Ribeirão Preto 生物医学信息学、FGV 的 MBA、Insper 的 CTO 研修、PMP、Oracle Cloud、ITIL 4、PM3、AWS Cloud、AWS Certified AI Practitioner，以及 MIT CEO Summit 2026。",
     },
     mentoria: {
       title: "与 Olsen Rodrigo 的导师辅导 | EAIOLSEN",
@@ -30,7 +30,7 @@ export const zh: Copy = {
     letramento: {
       title: "与 Olsen Rodrigo 的人工智能素养 | EAIOLSEN",
       description:
-        "面向个人和企业的人工智能素养。定制工作，4 小时或 8 小时，用实践练习处理运营中或日常里的问题。",
+        "人工智能素养，Olsen 或 Sintetiza AI 的个人咨询。四小时或八小时，用实践练习处理运营中或日常里的问题。",
     },
     contato: {
       title: "联系 Olsen Rodrigo | EAIOLSEN",
@@ -132,7 +132,7 @@ export const zh: Copy = {
     pathConsultoriaLink: "看咨询",
     pathLetramentoTitle: "人工智能素养",
     pathLetramentoText:
-      "面向需要在工作中使用人工智能的个人和企业。四小时或八小时，定制进行，练习对准运营或日常里的问题。结束时，参加者能够使用它，并能支持自己的任务。",
+      "个人咨询，由 Olsen 或 Sintetiza AI 来做，面向需要在工作中使用人工智能的个人和企业。四小时或八小时，练习对准运营或日常里的问题。结束时，参加者能够使用它，并能支持自己的任务。",
     pathLetramentoLink: "看这项素养工作",
     closing: "第一条消息可以很短：写上还没有定下来的决定，或日常里的那个问题。",
   },
@@ -277,7 +277,7 @@ export const zh: Copy = {
     whatTitle: "会发生什么",
     what1: "先有一次谈话，看这项决定是否适合这种形式。如果适合，双方约定会面，并且各自准备。没有班级，不强制录音，也没有课程路径。",
     what2:
-      "想上课的人有两个不同的地址。人工智能素养是定制工作，四小时或八小时，练习对准这个人或这家企业的问题。Escola Prudem 里应用于商业的人工智能，是学校的课程，在 Ipatinga。",
+      "导师辅导不是课。需要在真实问题上使用人工智能的人，可以看人工智能素养：一项个人咨询，由 Olsen 或 Sintetiza AI 来做，四小时或八小时。",
   },
   consultoria: {
     title: "咨询",
@@ -296,7 +296,7 @@ export const zh: Copy = {
   },
   letramento: {
     title: "人工智能素养",
-    intro: "面向个人，也面向企业。这是一项定制工作，四小时或八小时，用实践练习处理运营中或日常里的具体问题。",
+    intro: "一项个人咨询，由 Olsen 或 Sintetiza AI 来做。面向个人，也面向企业。四小时或八小时，用实践练习处理运营中或日常里的具体问题。",
     lead:
       "这不是一场讲人工智能能承诺什么的演讲。起点是已经存在的任务：反复出现的报告、客户接待、分析，以及吃掉一周的那个决定。",
     muted:
@@ -311,7 +311,7 @@ export const zh: Copy = {
     end:
       "实践。参加者能够在自己的日常工作里使用人工智能，并能支持手头的任务和挑战。得到的是对自己问题的判断，不是从一场演示里抄来的捷径。",
     aside:
-      "它不代替导师辅导。导师辅导是给已经在带队的人的决策谈话。它也不是 Escola Prudem 的课程，那是学校里的课。它也不包括把系统做出来。当真要建造时，工作转到咨询，并由 Sintetiza AI 执行。",
+      "这是咨询，而且是个人的：由 Olsen 来做，或由 Sintetiza AI 来做。它不代替导师辅导。导师辅导是给已经在带队的人的决策谈话。这项工作短，重实践，对准房间里这些人的问题。",
   },
   contato: {
     title: "联系",
@@ -345,7 +345,7 @@ export const zh: Copy = {
       },
       {
         q: "Olsen 在这个网站上提供什么？",
-        a: "人工智能素养，四小时或八小时，给需要在真实问题上使用工具的个人和企业。导师辅导给正在带队、又需要用项目方法做决定的人。咨询给必须在建设之前获得这种判断的企业。建设如果该发生，发生在 Sintetiza AI。",
+        a: "人工智能素养是 Olsen 或 Sintetiza AI 的个人咨询，四小时或八小时，给需要在真实问题上使用工具的人。导师辅导给正在带队、又需要用项目方法做决定的人。咨询给必须在建设之前获得这种判断的企业。建设如果该发生，发生在 Sintetiza AI。",
       },
     ],
     mentoria: [
@@ -355,7 +355,7 @@ export const zh: Copy = {
       },
       {
         q: "导师辅导是课程吗？",
-        a: "不是。没有班级，没有平台，也没有讲义。这是深入的谈话，日程在第一次谈话里约定。想要短而定制的实践，去看人工智能素养。想上学校的课，去 Ipatinga 的 Escola Prudem。",
+        a: "不是。没有班级，没有平台，也没有讲义。这是深入的谈话，日程在第一次谈话里约定。需要在日常问题上练习使用的人，可以看人工智能素养，那是 Olsen 或 Sintetiza AI 的个人咨询。",
       },
       {
         q: "一个人从导师辅导里带走什么？",
@@ -394,8 +394,8 @@ export const zh: Copy = {
         a: "参加者能够在日常工作里使用人工智能，并能支持自己工作中的任务和挑战。结果是在自己的问题上实践，并且带着判断。",
       },
       {
-        q: "这是导师辅导，还是 Prudem 的课程？",
-        a: "都不是。导师辅导是谈话，没有班级，也没有课。Escola Prudem 是他在 Ipatinga 讲授的课程。素养是另一项工作：定制、短、重实践。把系统做出来，如果该发生，那是咨询；到了执行，是 Sintetiza AI。",
+        q: "素养工作由谁来做？",
+        a: "这是 Olsen 或 Sintetiza AI 的个人咨询。练习对准这个人或这家企业的问题。导师辅导是另一场谈话：给已经在带队的人做决定。",
       },
     ],
     formacao: [
@@ -405,7 +405,7 @@ export const zh: Copy = {
       },
       {
         q: "他持有哪些专业认证？",
-        a: "用来组织工作的是 PMP，即 Project Management Professional，自 2016 年起。他还有 2022 年的 Oracle Cloud、ITIL 4 和 PM3，以及 2025 年的 AWS Cloud。他的全部工作，包括导师辅导，都从项目方法出发。",
+        a: "用来组织工作的是 PMP，即 Project Management Professional，自 2016 年起。他还有 2022 年的 Oracle Cloud、ITIL 4 和 PM3，2025 年的 AWS Cloud，以及 AWS Certified AI Practitioner。他的全部工作，包括导师辅导，都从项目方法出发。",
       },
     ],
   },
@@ -433,6 +433,6 @@ export const zh: Copy = {
     consultoriaService: "与 Olsen Rodrigo 的咨询",
     consultoriaServiceText: "为企业在建设解决方案之前做出人工智能决定而提供的咨询。",
     letramentoService: "与 Olsen Rodrigo 的人工智能素养",
-    letramentoServiceText: "面向个人和企业的定制工作，四小时或八小时，用来在运营或日常的问题上使用人工智能。",
+    letramentoServiceText: "Olsen Rodrigo 或 Sintetiza AI 的个人咨询，四小时或八小时，面向个人和企业，用来在运营或日常的问题上使用人工智能。",
   },
 };

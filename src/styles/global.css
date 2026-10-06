@@ -547,6 +547,15 @@ h1 {
   object-fit: contain;
 }
 
+.chip-badge {
+  height: auto;
+}
+
+.chip-badge img {
+  max-height: 5.4rem;
+  max-width: 5.4rem;
+}
+
 .qa { margin-top: 1.2rem; }
 
 .qa article {

@@ -88,7 +88,7 @@ export function graphFor(page: string, lang: Lang = "pt") {
     hasCredential: [
       ...certifications.map((item) => ({
         "@type": "EducationalOccupationalCredential",
-        name: `${item.name} (${item.year})`,
+        name: item.year ? `${item.name} (${item.year})` : item.name,
         credentialCategory: "certification",
         recognizedBy: { "@type": "Organization", name: item.place },
       })),

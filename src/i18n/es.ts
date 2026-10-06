@@ -15,7 +15,7 @@ export const es: Copy = {
     formacao: {
       title: "Formación y certificaciones de Olsen Rodrigo",
       description:
-        "Informática Biomédica en USP Ribeirão Preto, MBA en FGV, CTO en Insper, PMP, Oracle Cloud, ITIL 4, PM3, AWS Cloud y el MIT CEO Summit 2026.",
+        "Informática Biomédica en USP Ribeirão Preto, MBA en FGV, CTO en Insper, PMP, Oracle Cloud, ITIL 4, PM3, AWS Cloud, AWS Certified AI Practitioner y el MIT CEO Summit 2026.",
     },
     mentoria: {
       title: "Mentoría con Olsen Rodrigo | EAIOLSEN",
@@ -30,7 +30,7 @@ export const es: Copy = {
     letramento: {
       title: "Alfabetización en IA con Olsen Rodrigo | EAIOLSEN",
       description:
-        "Alfabetización en IA para personas y empresas. Trabajo personalizado, de 4 u 8 horas, con ejercicios prácticos sobre un problema de la operación o del día a día.",
+        "Alfabetización en IA, consultoría personal de Olsen o de Sintetiza AI. Cuatro u ocho horas, con ejercicios prácticos sobre un problema de la operación o del día a día.",
     },
     contato: {
       title: "Contacto de Olsen Rodrigo | EAIOLSEN",
@@ -137,7 +137,7 @@ export const es: Copy = {
     pathConsultoriaLink: "Ver la consultoría",
     pathLetramentoTitle: "Alfabetización en IA",
     pathLetramentoText:
-      "Para personas y empresas que necesitan usar la inteligencia artificial en el trabajo. Cuatro u ocho horas, personalizado, con un ejercicio sobre el problema de la operación o del día a día. Al final, la persona sale en condiciones de usarla y de apoyar sus propias tareas.",
+      "Consultoría personal, con Olsen o con Sintetiza AI, para personas y empresas que necesitan usar la inteligencia artificial en el trabajo. Cuatro u ocho horas, con un ejercicio sobre el problema de la operación o del día a día. Al final, la persona sale en condiciones de usarla y de apoyar sus propias tareas.",
     pathLetramentoLink: "Ver la alfabetización",
     closing: "El primer mensaje puede ser corto: la decisión abierta, o el problema del día a día.",
   },
@@ -295,7 +295,7 @@ export const es: Copy = {
     what1:
       "Una primera conversación para ver si la decisión cabe en este formato. Si cabe, encuentros acordados, con preparación de los dos lados. Sin grupo, sin grabación obligatoria, sin ruta de clases.",
     what2:
-      "Quien busca clase tiene dos direcciones distintas. La alfabetización en IA es un trabajo personalizado, de cuatro u ocho horas, con un ejercicio sobre el problema de la persona o de la empresa. La materia de IA aplicada a los negocios, en Escola Prudem, es el curso de la escuela, en Ipatinga.",
+      "La mentoría no es una clase. Quien necesita usar la inteligencia artificial en el problema real encuentra la alfabetización: una consultoría personal, con Olsen o con Sintetiza AI, de cuatro u ocho horas.",
   },
   consultoria: {
     title: "Consultoría",
@@ -315,7 +315,7 @@ export const es: Copy = {
   letramento: {
     title: "Alfabetización en IA",
     intro:
-      "Para personas y para empresas. Un trabajo personalizado, de cuatro u ocho horas, con ejercicios prácticos sobre un problema de la operación o del día a día.",
+      "Una consultoría personal, con Olsen o con Sintetiza AI. Para personas y para empresas. Cuatro u ocho horas, con ejercicios prácticos sobre un problema de la operación o del día a día.",
     lead:
       "No es una charla sobre lo que la inteligencia artificial promete. El punto de partida es la tarea que ya existe: el informe que se repite, la atención, el análisis, la decisión que se come la semana.",
     muted:
@@ -330,7 +330,7 @@ export const es: Copy = {
     end:
       "Práctica. La persona sale en condiciones de usar la inteligencia artificial en el día a día y de apoyar las tareas y los desafíos de su propio trabajo. El resultado es criterio sobre su problema, no un atajo copiado de una presentación.",
     aside:
-      "No reemplaza la mentoría, que es una conversación de decisión para quien ya lidera. No es la disciplina de la Escola Prudem, que es el curso de la escuela. Y no incluye construir el sistema. Cuando ese es el trabajo, sigue en la consultoría y en Sintetiza AI.",
+      "Es consultoría, y es personal: con Olsen o con Sintetiza AI. No reemplaza la mentoría, que es una conversación de decisión para quien ya lidera. El trabajo es corto y práctico, sobre el problema de quien está en la sala.",
   },
   contato: {
     title: "Contacto",
@@ -365,7 +365,7 @@ export const es: Copy = {
       },
       {
         q: "¿Qué ofrece Olsen en este sitio?",
-        a: "Alfabetización en IA, de cuatro u ocho horas, para personas y empresas que necesitan usar la herramienta en el problema real. Mentoría para quien lidera y necesita decidir con método de proyecto. Consultoría para la empresa que necesita ese juicio antes de construir. La construcción, cuando corresponde, ocurre en Sintetiza AI.",
+        a: "Alfabetización en IA, una consultoría personal de Olsen o de Sintetiza AI, de cuatro u ocho horas, para quien necesita usar la herramienta en el problema real. Mentoría para quien lidera y necesita decidir con método de proyecto. Consultoría para la empresa que necesita ese juicio antes de construir. La construcción, cuando corresponde, ocurre en Sintetiza AI.",
       },
     ],
     mentoria: [
@@ -375,7 +375,7 @@ export const es: Copy = {
       },
       {
         q: "¿La mentoría es un curso?",
-        a: "No. No hay grupo, plataforma ni cuaderno. Son conversaciones en profundidad, con la agenda acordada en la primera conversación. Quien quiere práctica corta y personalizada encuentra la alfabetización en IA. Quien quiere la materia de la escuela encuentra Escola Prudem, en Ipatinga.",
+        a: "No. No hay grupo, plataforma ni cuaderno. Son conversaciones en profundidad, con la agenda acordada en la primera conversación. Quien necesita practicar el uso en el problema del día a día encuentra la alfabetización en IA, una consultoría personal de Olsen o de Sintetiza AI.",
       },
       {
         q: "¿Qué se lleva la persona de la mentoría?",
@@ -414,8 +414,8 @@ export const es: Copy = {
         a: "La persona sale en condiciones de usar la inteligencia artificial en el día a día y de apoyar las tareas y los desafíos de su trabajo. El resultado es práctica sobre su problema, con criterio.",
       },
       {
-        q: "¿Esto es la mentoría o el curso de Prudem?",
-        a: "No. La mentoría es conversación, sin grupo y sin clase. La Escola Prudem es la disciplina que él da en Ipatinga. La alfabetización es un trabajo aparte: personalizado, corto y práctico. Construir el sistema, cuando corresponde, es consultoría y, en la ejecución, es Sintetiza AI.",
+        q: "¿Con quién es la alfabetización?",
+        a: "Es una consultoría personal de Olsen o de Sintetiza AI. El ejercicio es sobre el problema de la persona o de la empresa. La mentoría es otra conversación: una decisión para quien ya lidera.",
       },
     ],
     formacao: [
@@ -425,7 +425,7 @@ export const es: Copy = {
       },
       {
         q: "¿Qué certificaciones profesionales tiene?",
-        a: "La que organiza el trabajo es el PMP, Project Management Professional, desde 2016. También tiene Oracle Cloud, ITIL 4 y PM3 en 2022, y AWS Cloud en 2025. Todo su trabajo, mentoría incluida, parte de un método de proyecto.",
+        a: "La que organiza el trabajo es el PMP, Project Management Professional, desde 2016. También tiene Oracle Cloud, ITIL 4 y PM3 en 2022, AWS Cloud en 2025 y AWS Certified AI Practitioner. Todo su trabajo, mentoría incluida, parte de un método de proyecto.",
       },
     ],
   },
@@ -456,6 +456,6 @@ export const es: Copy = {
       "Consultoría para empresas que necesitan la decisión de inteligencia artificial antes de construir la solución.",
     letramentoService: "Alfabetización en IA con Olsen Rodrigo",
     letramentoServiceText:
-      "Trabajo personalizado, de cuatro u ocho horas, para que personas y empresas usen la inteligencia artificial en un problema de la operación o del día a día.",
+      "Consultoría personal de Olsen Rodrigo o de Sintetiza AI, de cuatro u ocho horas, para que personas y empresas usen la inteligencia artificial en un problema de la operación o del día a día.",
   },
 };
